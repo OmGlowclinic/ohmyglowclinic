@@ -4,69 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oh My Glow Clinic - Skin, Hair and Laser Clinic</title>
+    <title>Luxury Selection</title>
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" href="assets/coming-soon-assets/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/coming-soon-assets/img/favicon.ico" type="image/x-icon">
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ---------- BODY ---------- */
+        body {
+            height: 100vh;
+            background-image: url("mens/assets/img/bg/Leaf-bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
 
-    <link rel="stylesheet" type="text/css" href="assets/coming-soon-assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/coming-soon-assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/coming-soon-assets/css/iosoon-style.css">
-    <link rel="stylesheet" type="text/css" href="assets/coming-soon-assets/css/iosoon-theme8.css">
+        /* ---------- CONTAINER ---------- */
+        .entry {
+            display: flex;
+            gap: 100px;
+        }
 
+        /* ---------- CARD ---------- */
+        .card {
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
+        /* ---------- GOLD CIRCULAR BORDER ---------- */
+        .gold-frame {
+            width: 320px;
+            height: 320px;
+            padding: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,
+                    #d4af37,
+                    #fff1a8,
+                    #b8962e,
+                    #fff1a8,
+                    #d4af37);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s ease;
+        }
+
+        /* ---------- IMAGE ---------- */
+        .photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ---------- TEXT ---------- */
+        .card h1 {
+            margin-top: 26px;
+            color: white;
+            font-size: 30px;
+            letter-spacing: 6px;
+            font-weight: 500;
+        }
+
+        /* ---------- IMAGES ---------- */
+        .men-photo {
+            background-image: url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
+        }
+
+        .women-photo {
+            background-image: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
+        }
+
+        /* ---------- HOVER ---------- */
+        .card:hover .gold-frame {
+            transform: scale(1.05);
+        }
+
+        /* ---------- MOBILE ---------- */
+        @media(max-width:900px) {
+            .entry {
+                flex-direction: column;
+                gap: 60px;
+            }
+
+            .gold-frame {
+                width: 260px;
+                height: 260px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="form-body no-side">
-        <canvas id="pagebg" resize></canvas>
 
-        <div class="row">
-            <div class="form-holder">
-                <div class="form-content">
-                    <div class="form-items">
+    <div class="entry">
 
-                        <div class="website-logo-inside">
-                            <a href="index.html">
-                                <img src="assets/coming-soon-assets/img/oh-my-glow-clinic-white-logo.png"
-                                    alt="Oh My Glow Clinic Logo" class="shape1">
-                            </a>
-                        </div>
-
-                        <h3>Our New Website Is Coming Soon</h3>
-                        <p>
-                            Oh My Glow Clinic is crafting a refined digital experience for advanced
-                            <strong>skin, hair, and laser treatments</strong>.
-                            We focus on personalised care, medical expertise, and results-driven aesthetics —
-                            designed to enhance your natural glow with the highest standards of safety and precision.
-                        </p>
-
-                        <p>
-                            Our team is currently working behind the scenes to deliver a modern,
-                            informative, and seamless online experience for you.
-                        </p>
-
-                        <div class="other-links no-bg-icon">
-                            <a href="https://www.instagram.com/ohmyglowclinic/" target="_blank">
-                                <h4 style="color: aliceblue; margin-bottom: 8px; text-decoration: underline;">Follow us on Instagram</h4>
-                            </a>
-                        </div>
-
-
-                    </div>
-                </div>
+        <!-- MEN -->
+        <a href="mens/index.html" class="card">
+            <div class="gold-frame">
+                <div class="photo men-photo"></div>
             </div>
-        </div>
+            <h1>MEN</h1>
+        </a>
+
+        <!-- WOMEN -->
+        <a href="womens/index.html" class="card">
+            <div class="gold-frame">
+                <div class="photo women-photo"></div>
+            </div>
+            <h1>WOMEN</h1>
+        </a>
+
     </div>
 
-    <script src="assets/coming-soon-assets/js/jquery.min.js"></script>
-    <script src="assets/coming-soon-assets/js/popper.min.js"></script>
-    <script src="assets/coming-soon-assets/js/bootstrap.min.js"></script>
-    <script src="assets/coming-soon-assets/js/paper-full.min.js"></script>
-    <script src="assets/coming-soon-assets/js/animation2.js"></script>
-    <script src="assets/coming-soon-assets/js/main.js"></script>
 </body>
 
 </html>
