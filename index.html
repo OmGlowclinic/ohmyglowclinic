@@ -2,11 +2,22 @@
 <html lang="en">
 
 <head>
+    <!-- Google Analytics (async already good) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQW5HPCRSH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PQW5HPCRSH');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Selection</title>
 
-    <!-- DM Sans Font -->
+    <!-- 🔥 FAST FONT LOADING -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
@@ -14,21 +25,32 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
         }
 
-        /* ---------- BODY ---------- */
         body {
-            height: 100vh;
-            background-image: url("mens/assets/img/bg/Leaf-bg.png");
+            min-height: 100vh;
+            background-image: image-set(url("mens/assets/img/bg/Leaf-bg.png") 1x);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
+        /* ---------- LOGO ---------- */
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+        }
 
         /* ---------- CONTAINER ---------- */
         .entry {
@@ -36,14 +58,13 @@
             gap: 100px;
         }
 
-        /* ---------- CARD ---------- */
         .card {
             text-align: center;
-            cursor: pointer;
             text-decoration: none;
+            cursor: pointer;
+            will-change: transform;
         }
 
-        /* ---------- GOLD CIRCULAR BORDER ---------- */
         .gold-frame {
             width: 320px;
             height: 320px;
@@ -58,10 +79,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: 0.4s ease;
+            transition: transform 0.3s ease;
         }
 
-        /* ---------- IMAGE ---------- */
         .photo {
             width: 100%;
             height: 100%;
@@ -70,16 +90,6 @@
             background-position: center;
         }
 
-        /* ---------- TEXT ---------- */
-        .card h1 {
-            margin-top: 26px;
-            color: white;
-            font-size: 30px;
-            letter-spacing: 6px;
-            font-weight: 500;
-        }
-
-        /* ---------- IMAGES ---------- */
         .men-photo {
             background-image: url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
         }
@@ -88,13 +98,19 @@
             background-image: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
         }
 
-        /* ---------- HOVER ---------- */
-        .card:hover .gold-frame {
-            transform: scale(1.05);
+        .card h1 {
+            margin-top: 26px;
+            color: #fff;
+            font-size: 30px;
+            letter-spacing: 6px;
+            font-weight: 500;
         }
 
-        /* ---------- MOBILE ---------- */
-        @media(max-width:900px) {
+        .card:hover .gold-frame {
+            transform: scale(1.04);
+        }
+
+        @media (max-width: 900px) {
             .entry {
                 flex-direction: column;
                 gap: 60px;
@@ -104,15 +120,24 @@
                 width: 260px;
                 height: 260px;
             }
+
+            .logo img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="https://ohmyglowlcinic.netlify.app/mens/assets/img/logos/oh-my-glow-clinic-white-logo.png"
+            alt="Oh My Glow Clinic Logo" loading="eager">
+    </div>
+
     <div class="entry">
 
-        <!-- MEN -->
         <a href="mens/index.html" class="card">
             <div class="gold-frame">
                 <div class="photo men-photo"></div>
@@ -120,7 +145,6 @@
             <h1>MEN</h1>
         </a>
 
-        <!-- WOMEN -->
         <a href="womens/index.html" class="card">
             <div class="gold-frame">
                 <div class="photo women-photo"></div>

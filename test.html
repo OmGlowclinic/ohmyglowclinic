@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oh My Glow Clinic | Skin & Aesthetic Treatments</title>
+
+    <meta name="description"
+        content="Oh My Glow Clinic provides advanced skin, hair, and aesthetic treatments for women and men with expert care.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================= BASE ================= */
+        .omg-body {
+            margin: 0;
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background-color: #ffffff;
+            color: #222222;
+        }
+
+        /* ================= HEADER ================= */
+        .omg-header {
+            padding: 24px 16px;
+            text-align: center;
+        }
+
+        .omg-logo {
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ================= MAIN ================= */
+        .omg-main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px 120px;
+        }
+
+        .omg-section {
+            margin-bottom: 64px;
+        }
+
+        .omg-h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .omg-h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+
+        .omg-text {
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        /* ================= MODE ================= */
+        .omg-women,
+        .omg-men {
+            display: none;
+        }
+
+        .omg-body[data-mode="women"] .omg-women {
+            display: block;
+        }
+
+        .omg-body[data-mode="men"] .omg-men {
+            display: block;
+        }
+
+        /* ================= MODE PILL ================= */
+        .omg-mode-pill {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 26px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* ================= BACKDROP ================= */
+        .omg-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 998;
+        }
+
+        .omg-backdrop--show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* ================= DRAWER / POPUP ================= */
+        .omg-drawer {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 24px 20px 32px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            transition: bottom 0.35s ease, transform 0.35s ease;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+        }
+
+        .omg-drawer--open {
+            bottom: 0;
+        }
+
+        .omg-drawer-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .omg-drawer-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .omg-option {
+            padding: 28px 16px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.25s ease;
+        }
+
+        .omg-option:hover {
+            transform: scale(1.03);
+        }
+
+        .omg-option--women {
+            background-color: #F4A7C1;
+            color: #4a1f2d;
+        }
+
+        .omg-option--men {
+            background-color: #E8DCCB;
+            color: #3a2f22;
+        }
+
+        /* ================= FOOTER ================= */
+        .omg-footer {
+            text-align: center;
+            padding: 32px 16px;
+            font-size: 14px;
+            color: #777777;
+        }
+
+        /* ================= DESKTOP POPUP ================= */
+        @media (min-width: 1024px) {
+            .omg-drawer {
+                width: 420px;
+                left: 50%;
+                bottom: 50%;
+                transform: translate(-50%, 50%);
+                border-radius: 20px;
+            }
+
+            .omg-drawer--open {
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body class="omg-body" data-mode="women">
+
+    <header class="omg-header">
+        <img src="https://ohmyglowlcinic.netlify.app/mens/assets/img/logos/oh-my-glow-clinic-white-logo.png"
+            alt="Oh My Glow Clinic Logo" class="omg-logo">
+    </header>
+
+    <main class="omg-main">
+
+        <!-- WOMEN -->
+        <section class="omg-section omg-women">
+            <h1 class="omg-h1">Advanced Aesthetic Treatments for Women</h1>
+            <p class="omg-text">
+                Specialized skin, hair, and beauty treatments for women using advanced
+                technology and expert medical care.
+            </p>
+        </section>
+
+        <!-- MEN -->
+        <section class="omg-section omg-men">
+            <h1 class="omg-h1">Skin & Aesthetic Treatments for Men</h1>
+            <p class="omg-text">
+                Result-driven, discreet skin and hair treatments tailored specifically for men.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="omg-footer">
+        © 2026 Oh My Glow Clinic. All rights reserved.
+    </footer>
+
+    <button class="omg-mode-pill" onclick="omgOpenDrawer()">
+        Switch Men / Women
+    </button>
+
+    <div class="omg-backdrop" id="omgBackdrop" onclick="omgCloseDrawer()"></div>
+
+    <div class="omg-drawer" id="omgDrawer">
+        <div class="omg-drawer-title">Choose Your Experience</div>
+
+        <div class="omg-drawer-options">
+            <button class="omg-option omg-option--women" onclick="omgSetMode('women')">Women</button>
+            <button class="omg-option omg-option--men" onclick="omgSetMode('men')">Men</button>
+        </div>
+    </div>
+
+    <script>
+        const omgDrawer = document.getElementById('omgDrawer');
+        const omgBackdrop = document.getElementById('omgBackdrop');
+        const omgBody = document.querySelector('.omg-body');
+
+        function omgOpenDrawer() {
+            omgDrawer.classList.add('omg-drawer--open');
+            omgBackdrop.classList.add('omg-backdrop--show');
+        }
+
+        function omgCloseDrawer() {
+            omgDrawer.classList.remove('omg-drawer--open');
+            omgBackdrop.classList.remove('omg-backdrop--show');
+        }
+
+        function omgSetMode(mode) {
+            omgBody.setAttribute('data-mode', mode);
+            localStorage.setItem('omgMode', mode);
+            localStorage.setItem('omgDrawerSeen', 'yes');
+            omgCloseDrawer();
+        }
+
+        const savedMode = localStorage.getItem('omgMode');
+        const drawerSeen = localStorage.getItem('omgDrawerSeen');
+
+        if (savedMode) {
+            omgBody.setAttribute('data-mode', savedMode);
+        }
+
+        if (!drawerSeen) {
+            setTimeout(omgOpenDrawer, 600);
+        }
+    </script>
+
+</body>
+
+</html>
