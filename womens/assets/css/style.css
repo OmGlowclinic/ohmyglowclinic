@@ -2034,7 +2034,7 @@ textarea.is-invalid {
 }
 
 .sec-subtext {
-  background-color: #fde6d8;
+  background-color: #BD8FB5;
   display: inline-block;
   padding: 6px 17px 6px 20px;
   margin-left: 5px;
@@ -7107,12 +7107,22 @@ blockquote.vs-quote cite:before {
   color: #555555;
   border-left: 3px solid var(--theme-color);
   max-width: 630px;
-  background-image: linear-gradient(to right, rgba(253, 230, 216, 0.79) 0%, rgba(252, 243, 239, 0) 100%);
+  background-image: linear-gradient(
+  to right,
+  rgba(249, 225, 234, 0.9) 0%,
+  rgba(249, 225, 234, 0.3) 60%,
+  rgba(249, 225, 234, 0) 100%
+); 100%);
 }
 
 .quote-text2 {
   border-left: 3px solid var(--theme-color);
-  background-image: linear-gradient(to right, rgba(253, 230, 216, 0.79) 0%, rgba(252, 243, 239, 0) 100%);
+  background-image: linear-gradient(
+  to right,
+  rgba(249, 225, 234, 0.9) 0%,
+  rgba(249, 225, 234, 0.3) 60%,
+  rgba(249, 225, 234, 0) 100%
+); 100%);
   padding: 10px 0 10px 15px;
   margin: 25px 0 25px 0;
 }
@@ -7555,7 +7565,7 @@ blockquote.vs-quote cite:before {
 }
 .form-style2 select,
 .form-style2 input {
-  background-color: #fde6d8;
+  background-color: #BD8FB5;
   border: none;
   color: #6f6c6c;
   font-size: 14px;
@@ -7576,7 +7586,7 @@ blockquote.vs-quote cite:before {
 }
 .form-style2 select:focus,
 .form-style2 input:focus {
-  background-color: #fde6d8;
+  background-color: #BD8FB5;
 }
 .form-style2 .vs-btn {
   margin-top: 27px;
