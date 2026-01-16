@@ -1520,6 +1520,60 @@
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
     <script src="dynamic.js"></script>
+    <script>
+        const scriptURL = document.forms['consultation-form'].action;
+        const form = document.forms['consultation-form'];
+
+        const popupMessage = document.getElementById('popupMessage');
+        const closePopup = document.getElementById('closePopup');
+        const submitButton = document.querySelector('.vs-btn .button-text');
+        const popupContent = popupMessage.querySelector('.popup-content');
+        const popupTitle = popupContent.querySelector('h2');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            submitButton.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Submitting...';
+
+            const nameInput = form.querySelector('input[name="name"]').value;
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(() => {
+                    popupTitle.innerHTML = `Thank you, ${nameInput}!`;
+
+                    popupMessage.style.display = 'block';
+                    setTimeout(() => {
+                        popupContent.style.opacity = '1';
+                        popupContent.style.transform = 'scale(1)';
+                    }, 10);
+
+                    submitButton.innerHTML = '<i class="fa fa-check"></i> Submitted';
+
+                    setTimeout(() => {
+                        submitButton.innerHTML = 'Book Free Skin Consultation';
+                    }, 2000);
+
+                    form.reset();
+
+                    setTimeout(() => {
+                        popupMessage.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(() => {
+                    submitButton.innerHTML = 'Book Free Skin Consultation';
+                });
+        });
+
+        closePopup.addEventListener('click', () => {
+            popupMessage.style.display = 'none';
+        });
+
+        popupMessage.addEventListener('click', (e) => {
+            if (e.target === popupMessage) {
+                popupMessage.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 
