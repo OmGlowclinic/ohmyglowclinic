@@ -94,7 +94,7 @@ Version: 1.0.0
   --success-color: #28a745;
   --error-color: #dc3545;
   --border-color: #e7e5e5;
-  --title-font: "Marcellus", serif;
+  --title-font: "DM Sans", sans-serif;
   --body-font: "DM Sans", sans-serif;
   --icon-font: "Font Awesome 5 Pro";
   --main-container: 1270px;
@@ -2013,7 +2013,7 @@ textarea.is-invalid {
   margin-bottom: 17px;
 }
 .sec-title4 .inner-text {
-  font-size: 24px;
+  font-size: 48px;
   display: inline-block;
   color: var(--theme-color);
   max-width: 70px;
