@@ -141,7 +141,7 @@
                         <div class="tr">
                             <div class="tb-col">
                                 <span class="th">Address :</span>
-                                <span class="td">Sector 20D, Chandigarh</span>
+                                <span class="td">3048, Dakshin Marg, Sector 20D, Sector 20, Chandigarh, 160020</span>
                             </div>
                         </div>
                         <div class="tr">
@@ -166,6 +166,65 @@
             </div>
         </div>
     </section>
+    <!-- OMG CLINIC POPUP -->
+    <div class="omgcp-overlay" id="omgcpOverlay">
+        <div class="omgcp-modal">
+
+            <!-- IMAGE -->
+            <div class="omgcp-media">
+                <img src="assets/img/popup/popup-img-1.jpg" alt="Clinic Consultation">
+            </div>
+
+            <!-- CONTENT -->
+            <div class="omgcp-body">
+                <button class="omgcp-close" aria-label="Close popup">×</button>
+
+                <h3 class="omgcp-title">Book Free Consultation</h3>
+                <p class="omgcp-subtitle">
+                    Doctor-led skin, hair & laser solutions.
+                </p>
+
+
+                <form class="omgcp-form" id="omgcpForm">
+
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+                    <!-- GENDER SELECT -->
+                    <div class="omgcp-gender-row">
+
+                        <input type="radio" name="gender" id="gender-men" value="Men" checked hidden>
+                        <label for="gender-men" class="gender-card">
+                            <i class="fas fa-mars"></i>
+                            <span>Men</span>
+                        </label>
+
+                        <input type="radio" name="gender" id="gender-women" value="Women" hidden>
+                        <label for="gender-women" class="gender-card">
+                            <i class="fas fa-venus"></i>
+                            <span>Women</span>
+                        </label>
+
+                    </div>
+
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option>Skin Treatment</option>
+                        <option>Hair Treatment</option>
+                        <option>Laser Hair Reduction</option>
+                        <option>Body Contouring</option>
+                    </select>
+
+                    <button type="submit" class="omgcp-submit">
+                        Book Appointment
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
     <div data-include="footer.html"></div>
     <!-- Scroll To Top -->
     <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
@@ -201,6 +260,192 @@
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
     <script src="dynamic.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const hero = document.querySelector('.mobile-hero');
+
+        let current = 0;
+        let startX = 0;
+        let autoSlide;
+        const duration = 800; // must match CSS fade time
+
+        // Init
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === 0 ? '1' : '0';
+            slide.classList.toggle('active', i === 0);
+        });
+
+        function showSlide(next) {
+            if (next === current) return;
+
+            const currentSlide = slides[current];
+            const nextSlide = slides[next];
+
+            // Prepare next slide
+            nextSlide.classList.add('active');
+            nextSlide.style.opacity = '1';
+
+            // Fade out current
+            currentSlide.style.opacity = '0';
+
+            setTimeout(() => {
+                currentSlide.classList.remove('active');
+                current = next;
+            }, duration);
+        }
+
+        function nextSlide() {
+            const next = current + 1 < slides.length ? current + 1 : 0;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            const prev = current - 1 >= 0 ? current - 1 : slides.length - 1;
+            showSlide(prev);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 4000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        // Start loop
+        startAutoSlide();
+
+        // Swipe support
+        hero.addEventListener('touchstart', (e) => {
+            stopAutoSlide();
+            startX = e.touches[0].clientX;
+        });
+
+        hero.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextSlide() : prevSlide();
+            }
+
+            startAutoSlide();
+        });
+    </script>
+    <script>
+        (function () {
+
+            /* =========================
+               CONFIG
+            ========================= */
+            const POPUP_KEY = "omgcp_popup_views";
+            const MAX_VIEWS = 4;
+            const SHEET_URL = "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec";
+
+            /* =========================
+               ELEMENTS
+            ========================= */
+            const overlay = document.getElementById("omgcpOverlay");
+            const closeBtn = overlay?.querySelector(".omgcp-close");
+            const form = document.getElementById("omgcpForm");
+
+            if (!overlay || !form) return;
+
+            /* =========================
+               SCROLL CONTROL
+            ========================= */
+            function lockScroll() {
+                document.body.style.overflow = "hidden";
+                document.documentElement.style.overflow = "hidden";
+            }
+
+            function unlockScroll() {
+                document.body.style.overflow = "";
+                document.documentElement.style.overflow = "";
+            }
+
+            /* =========================
+               POPUP CONTROL
+            ========================= */
+            function openPopup() {
+                overlay.style.display = "flex";
+                lockScroll();
+            }
+
+            function closePopup() {
+                overlay.style.display = "none";
+                unlockScroll();
+            }
+
+            /* =========================
+               AUTO POPUP (MAX 4 TIMES)
+            ========================= */
+            window.addEventListener("load", () => {
+                const views = parseInt(localStorage.getItem(POPUP_KEY) || "0", 10);
+
+                if (views < MAX_VIEWS) {
+                    setTimeout(() => {
+                        openPopup();
+                        localStorage.setItem(POPUP_KEY, views + 1);
+                    }, 3000);
+                }
+            });
+
+            // Manual trigger if needed
+            window.openClinicPopup = openPopup;
+
+            /* =========================
+               CLOSE ACTIONS
+            ========================= */
+            closeBtn?.addEventListener("click", closePopup);
+
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) closePopup();
+            });
+
+            /* =========================
+               FORM SUBMIT (GOOGLE SHEET)
+            ========================= */
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const btn = form.querySelector(".omgcp-submit");
+                if (btn.disabled) return;
+
+                btn.innerText = "Submitting...";
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+
+                fetch(SHEET_URL, {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(res => res.text())
+                    .then(res => {
+                        if (res === "success") {
+                            btn.innerText = "Submitted ✓";
+                            form.reset();
+
+                            setTimeout(() => {
+                                btn.innerText = "Book Appointment";
+                                btn.disabled = false;
+                                closePopup();
+                            }, 1800);
+                        } else {
+                            throw new Error("Submission failed");
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Google Sheet Error:", err);
+                        alert("Something went wrong. Please try again.");
+                        btn.innerText = "Book Appointment";
+                        btn.disabled = false;
+                    });
+            });
+
+        })();
+    </script>
 </body>
 
 </html>

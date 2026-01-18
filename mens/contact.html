@@ -108,40 +108,40 @@
                                 inner beauty with our essential</p>
                         </div>
                     </div>
-                    <form action="mail.php" method="POST" class="ajax-contact form-style6">
-                        <div class="form-group">
-                            <input type="text" name="name" id="name" placeholder="Your Name*">
+                    <form id="omgContactForm" class="omg-contact-form">
+
+                        <div class="omg-form-group">
+                            <input type="text" name="name" placeholder="Your Name*" required>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" placeholder="Your Email*">
+
+                        <div class="omg-form-group">
+                            <input type="email" name="email" placeholder="Your Email*" required>
                         </div>
-                        <div class="form-group">
-                            <select name="subject" id="subject">
-                                <option value="" selected disabled hidden>Subject*</option>
-                                <option value="Skin Care">Skin Care</option>
-                                <option value="Beauty Makeup">Beauty Makeup</option>
-                                <option value="Body Massage">Body Massage</option>
-                                <option value="Skin Checkup">Skin Checkup</option>
-                                <option value="Others">Others</option>
-                            </select>
+
+                        <div class="omg-form-group">
+                            <textarea name="message" placeholder="Message*" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea name="message" id="message" placeholder="Message*"></textarea>
-                        </div>
-                        <button class="vs-btn" type="submit">Send Message</button>
-                        <p class="form-messages"></p>
+
+                        <!-- IMPORTANT: hidden source -->
+                        <input type="hidden" name="source" value="Contact Form">
+
+                        <button type="submit" class="omg-btn">Send Message</button>
+                        <p class="omg-form-status"></p>
+
                     </form>
+
+
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="contact-map"><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10228.333094808544!2d8.71427116977539!3d50.14087400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0efc21096a2f%3A0x9c0f8cba401c081c!2sWilhelmsh%C3%B6her%20Str.%2077%2C%2060389%20Frankfurt%20am%20Main%2C%20Germany!5e0!3m2!1sen!2sbd!4v1677669261209!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.6416052202985!2d76.77506807562088!3d30.72083652459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedaadde82a27%3A0x77757b7dc8dca540!2sSector%2020D%2C%20Sector%2020%2C%20Chandigarh!5e1!3m2!1sen!2sin!4v1768420290639!5m2!1sen!2sin"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                     <div class="contact-table">
                         <div class="tr">
                             <div class="tb-col">
                                 <span class="th">Address :</span>
-                                <span class="td">Sector 20D, Chandigarh</span>
+                                <span class="td">3048, Dakshin Marg, Sector 20D, Sector 20, Chandigarh, 160020</span>
                             </div>
                         </div>
                         <div class="tr">
@@ -172,6 +172,65 @@
     </section>
     <br>
     <br>
+    <!-- OMG CLINIC POPUP -->
+    <div class="omgcp-overlay" id="omgcpOverlay">
+        <div class="omgcp-modal">
+
+            <!-- IMAGE -->
+            <div class="omgcp-media">
+                <img src="/womens/assets/img/popup/popup-img-1.jpg" alt="Clinic Consultation">
+            </div>
+
+            <!-- CONTENT -->
+            <div class="omgcp-body">
+                <button class="omgcp-close" aria-label="Close popup">×</button>
+
+                <h3 class="omgcp-title">Book Free Consultation</h3>
+                <p class="omgcp-subtitle">
+                    Doctor-led skin, hair & laser solutions.
+                </p>
+
+
+                <form class="omgcp-form" id="omgcpForm">
+
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+                    <!-- GENDER SELECT -->
+                    <div class="omgcp-gender-row">
+
+                        <input type="radio" name="gender" id="gender-men" value="Men" checked hidden>
+                        <label for="gender-men" class="gender-card">
+                            <i class="fas fa-mars"></i>
+                            <span>Men</span>
+                        </label>
+
+                        <input type="radio" name="gender" id="gender-women" value="Women" hidden>
+                        <label for="gender-women" class="gender-card">
+                            <i class="fas fa-venus"></i>
+                            <span>Women</span>
+                        </label>
+
+                    </div>
+
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option>Skin Treatment</option>
+                        <option>Hair Treatment</option>
+                        <option>Laser Hair Reduction</option>
+                        <option>Body Contouring</option>
+                    </select>
+
+                    <button type="submit" class="omgcp-submit">
+                        Book Appointment
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
     <div data-include="footer.html"></div>
     <!-- Scroll To Top -->
     <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
@@ -207,6 +266,261 @@
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
     <script src="dynamic.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const hero = document.querySelector('.mobile-hero');
+
+        let current = 0;
+        let startX = 0;
+        let autoSlide;
+        const duration = 800; // must match CSS fade time
+
+        // Init
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === 0 ? '1' : '0';
+            slide.classList.toggle('active', i === 0);
+        });
+
+        function showSlide(next) {
+            if (next === current) return;
+
+            const currentSlide = slides[current];
+            const nextSlide = slides[next];
+
+            // Prepare next slide
+            nextSlide.classList.add('active');
+            nextSlide.style.opacity = '1';
+
+            // Fade out current
+            currentSlide.style.opacity = '0';
+
+            setTimeout(() => {
+                currentSlide.classList.remove('active');
+                current = next;
+            }, duration);
+        }
+
+        function nextSlide() {
+            const next = current + 1 < slides.length ? current + 1 : 0;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            const prev = current - 1 >= 0 ? current - 1 : slides.length - 1;
+            showSlide(prev);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 4000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        // Start loop
+        startAutoSlide();
+
+        // Swipe support
+        hero.addEventListener('touchstart', (e) => {
+            stopAutoSlide();
+            startX = e.touches[0].clientX;
+        });
+
+        hero.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextSlide() : prevSlide();
+            }
+
+            startAutoSlide();
+        });
+    </script>
+    <script>
+        (function () {
+
+            /* =========================
+               CONFIG
+            ========================= */
+            const CONFIG = {
+                POPUP_KEY: "omgcp_popup_views",
+                MAX_VIEWS: 4,
+                POPUP_DELAY: 3000,
+                SHEET_URL: "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec"
+            };
+
+            /* =========================
+               POPUP ELEMENTS
+            ========================= */
+            const overlay = document.getElementById("omgcpOverlay");
+            const closeBtn = overlay?.querySelector(".omgcp-close");
+            const popupForm = document.getElementById("omgcpForm");
+
+            /* =========================
+               CONTACT FORM ELEMENT
+            ========================= */
+            const contactForm = document.getElementById("omgContactForm");
+
+            /* =========================
+               SCROLL CONTROL
+            ========================= */
+            function lockScroll() {
+                document.body.style.overflow = "hidden";
+                document.documentElement.style.overflow = "hidden";
+            }
+
+            function unlockScroll() {
+                document.body.style.overflow = "";
+                document.documentElement.style.overflow = "";
+            }
+
+            /* =========================
+               POPUP CONTROL
+            ========================= */
+            function openPopup() {
+                if (!overlay) return;
+                overlay.style.display = "flex";
+                lockScroll();
+            }
+
+            function closePopup() {
+                if (!overlay) return;
+                overlay.style.display = "none";
+                unlockScroll();
+            }
+
+            // Expose globally (used anywhere)
+            window.openClinicPopup = openPopup;
+
+            /* =========================
+               AUTO POPUP (SAFE)
+            ========================= */
+            if (overlay) {
+                window.addEventListener("load", () => {
+                    const views = parseInt(localStorage.getItem(CONFIG.POPUP_KEY) || "0", 10);
+                    if (views < CONFIG.MAX_VIEWS) {
+                        setTimeout(() => {
+                            openPopup();
+                            localStorage.setItem(CONFIG.POPUP_KEY, views + 1);
+                        }, CONFIG.POPUP_DELAY);
+                    }
+                });
+
+                closeBtn?.addEventListener("click", closePopup);
+
+                overlay.addEventListener("click", (e) => {
+                    if (e.target === overlay) closePopup();
+                });
+            }
+
+            /* =========================
+               GENERIC FORM SUBMIT HANDLER
+               (Used by BOTH forms)
+            ========================= */
+            function submitToSheet(form, options = {}) {
+                const btn = options.button || null;
+                const status = options.status || null;
+                const closeOnSuccess = options.closePopup || false;
+
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerText = "Submitting...";
+                }
+
+                if (status) {
+                    status.textContent = "Sending...";
+                    status.style.color = "#555";
+                }
+
+                const formData = new FormData(form);
+
+                fetch(CONFIG.SHEET_URL, {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(res => res.text())
+                    .then(res => {
+                        if (res.trim() === "success") {
+                            form.reset();
+
+                            if (btn) {
+                                btn.innerText = "Submitted ✓";
+                                setTimeout(() => {
+                                    btn.innerText = options.originalText || "Submit";
+                                    btn.disabled = false;
+                                }, 1500);
+                            }
+
+                            if (status) {
+                                status.textContent = "Message sent successfully!";
+                                status.style.color = "green";
+                            }
+
+                            if (closeOnSuccess) {
+                                setTimeout(closePopup, 1200);
+                            }
+
+                        } else {
+                            throw new Error("Submission failed");
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Sheet Error:", err);
+
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.innerText = options.originalText || "Submit";
+                        }
+
+                        if (status) {
+                            status.textContent = "Oops! Something went wrong.";
+                            status.style.color = "red";
+                        } else {
+                            alert("Something went wrong. Please try again.");
+                        }
+                    });
+            }
+
+            /* =========================
+               POPUP FORM SUBMIT
+            ========================= */
+            if (popupForm) {
+                popupForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    const btn = popupForm.querySelector(".omgcp-submit");
+
+                    if (btn?.disabled) return;
+
+                    submitToSheet(popupForm, {
+                        button: btn,
+                        originalText: "Book Appointment",
+                        closePopup: true
+                    });
+                });
+            }
+
+            /* =========================
+               CONTACT FORM SUBMIT
+            ========================= */
+            if (contactForm) {
+                const status = contactForm.querySelector(".omg-form-status");
+
+                contactForm.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); // kills theme PHP/AJAX
+
+                    submitToSheet(contactForm, {
+                        status: status
+                    });
+                });
+            }
+
+        })();
+    </script>
+
 </body>
 
 </html>

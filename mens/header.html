@@ -121,7 +121,7 @@
                 </div>
                 <div class="info-media1">
                     <div class="media-icon"><i class="fal fa-map-marker-alt"></i></div>
-                    <span class="media-label">Sector 20D, Chandigarh</span>
+                    <span class="media-label">3048, Dakshin Marg, Sector 20D, Sector 20, Chandigarh, 160020</span>
                 </div>
                 <div class="info-media1">
                     <div class="media-icon"><i class="far fa-phone-alt "></i></div>
@@ -220,15 +220,17 @@
                                     <li>
                                         <a href="team.html">Team</a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="contact.html">Contact Us</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
                         <div class="col-auto">
                             <div class="header-btns">
-                                <a href="contact.html" class="vs-btn style2 d-none d-xl-inline-block">Book</a>
+                                <!-- <a href="javascript:void(0)" class="vs-btn style2 d-none d-xl-inline-block">Book</a> -->
+                                <a href="javascript:void(0)" class="vs-btn style2 d-none d-xl-inline-block"
+                                    onclick="openClinicPopup()">Book Now</a>
                                 <button class="bar-btn sideMenuToggler d-none d-xl-inline-block">
                                     <span class="bar"></span>
                                     <span class="bar"></span>
@@ -243,7 +245,192 @@
             </div>
         </div>
     </header>
+    <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const hero = document.querySelector('.mobile-hero');
 
+        let current = 0;
+        let startX = 0;
+        let autoSlide;
+        const duration = 800; // must match CSS fade time
+
+        // Init
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === 0 ? '1' : '0';
+            slide.classList.toggle('active', i === 0);
+        });
+
+        function showSlide(next) {
+            if (next === current) return;
+
+            const currentSlide = slides[current];
+            const nextSlide = slides[next];
+
+            // Prepare next slide
+            nextSlide.classList.add('active');
+            nextSlide.style.opacity = '1';
+
+            // Fade out current
+            currentSlide.style.opacity = '0';
+
+            setTimeout(() => {
+                currentSlide.classList.remove('active');
+                current = next;
+            }, duration);
+        }
+
+        function nextSlide() {
+            const next = current + 1 < slides.length ? current + 1 : 0;
+            showSlide(next);
+        }
+
+        function prevSlide() {
+            const prev = current - 1 >= 0 ? current - 1 : slides.length - 1;
+            showSlide(prev);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 4000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        // Start loop
+        startAutoSlide();
+
+        // Swipe support
+        hero.addEventListener('touchstart', (e) => {
+            stopAutoSlide();
+            startX = e.touches[0].clientX;
+        });
+
+        hero.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextSlide() : prevSlide();
+            }
+
+            startAutoSlide();
+        });
+    </script>
+    <script>
+        (function () {
+
+            /* =========================
+               CONFIG
+            ========================= */
+            const POPUP_KEY = "omgcp_popup_views";
+            const MAX_VIEWS = 4;
+            const SHEET_URL = "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec";
+
+            /* =========================
+               ELEMENTS
+            ========================= */
+            const overlay = document.getElementById("omgcpOverlay");
+            const closeBtn = overlay?.querySelector(".omgcp-close");
+            const form = document.getElementById("omgcpForm");
+
+            if (!overlay || !form) return;
+
+            /* =========================
+               SCROLL CONTROL
+            ========================= */
+            function lockScroll() {
+                document.body.style.overflow = "hidden";
+                document.documentElement.style.overflow = "hidden";
+            }
+
+            function unlockScroll() {
+                document.body.style.overflow = "";
+                document.documentElement.style.overflow = "";
+            }
+
+            /* =========================
+               POPUP CONTROL
+            ========================= */
+            function openPopup() {
+                overlay.style.display = "flex";
+                lockScroll();
+            }
+
+            function closePopup() {
+                overlay.style.display = "none";
+                unlockScroll();
+            }
+
+            /* =========================
+               AUTO POPUP (MAX 4 TIMES)
+            ========================= */
+            window.addEventListener("load", () => {
+                const views = parseInt(localStorage.getItem(POPUP_KEY) || "0", 10);
+
+                if (views < MAX_VIEWS) {
+                    setTimeout(() => {
+                        openPopup();
+                        localStorage.setItem(POPUP_KEY, views + 1);
+                    }, 3000);
+                }
+            });
+
+            // Manual trigger if needed
+            window.openClinicPopup = openPopup;
+
+            /* =========================
+               CLOSE ACTIONS
+            ========================= */
+            closeBtn?.addEventListener("click", closePopup);
+
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) closePopup();
+            });
+
+            /* =========================
+               FORM SUBMIT (GOOGLE SHEET)
+            ========================= */
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const btn = form.querySelector(".omgcp-submit");
+                if (btn.disabled) return;
+
+                btn.innerText = "Submitting...";
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+
+                fetch(SHEET_URL, {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(res => res.text())
+                    .then(res => {
+                        if (res === "success") {
+                            btn.innerText = "Submitted ✓";
+                            form.reset();
+
+                            setTimeout(() => {
+                                btn.innerText = "Book Appointment";
+                                btn.disabled = false;
+                                closePopup();
+                            }, 1800);
+                        } else {
+                            throw new Error("Submission failed");
+                        }
+                    })
+                    .catch(err => {
+                        console.error("Google Sheet Error:", err);
+                        alert("Something went wrong. Please try again.");
+                        btn.innerText = "Book Appointment";
+                        btn.disabled = false;
+                    });
+            });
+
+        })();
+    </script>
 
     <!--==============================
         All Js File

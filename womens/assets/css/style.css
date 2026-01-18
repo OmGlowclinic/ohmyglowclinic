@@ -696,6 +696,7 @@ input[type=radio]~label::before {
   background: var(--body-bg);
   color: transparent;
   transition: all 0.2s ease;
+  display: none;
 }
 
 input[type=radio]:checked~label::before {
@@ -15263,49 +15264,43 @@ section:last-of-type {
   padding-bottom: 0 !important;
 }
 
-/* =========================
-   OMG POPUP – GENDER INSIDE FORM
-========================= */
-
 .omgcp-gender-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.omgcp-gender-option {
-  position: relative;
-  cursor: pointer;
-}
-
-.omgcp-gender-option input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.omgcp-gender-option span {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 0;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.gender-card {
+  flex: 1;
+  border: 1.5px solid #ddd;
   border-radius: 12px;
-  border: 1px solid rgba(140, 25, 119, 0.25);
-  background: #fff;
-  font-family: "DM Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 14px 10px;
+  text-align: center;
+  cursor: pointer;
   transition: all 0.25s ease;
-}
-
-/* ACTIVE STATE */
-.omgcp-gender-option input:checked+span {
   background: #fff;
-  color: #8c1977;
-  border-color: #8c1977;
 }
 
-/* HOVER */
-.omgcp-gender-option span:hover {
-  background: rgba(140, 25, 119, 0.06);
+.gender-card i {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 6px;
+  color: #999;
+}
+
+.gender-card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Selected state */
+input[type="radio"]:checked+.gender-card {
+  border-color: #c7a36a;
+  /* premium gold tone */
+  background: #fdf8f1;
+}
+
+input[type="radio"]:checked+.gender-card i {
+  color: #c7a36a;
 }

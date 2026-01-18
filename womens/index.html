@@ -1282,7 +1282,8 @@
                     </a>
                 </div>
 
-        </section><!--==============================
+        </section>
+        <br><br> <!--==============================
     Testimonial Area
     ==============================-->
         <!-- <section class=" space-top space-extra-bottom">
@@ -1371,6 +1372,7 @@
         <!-- Elfsight Google Reviews | Untitled Google Reviews -->
         <script src="https://elfsightcdn.com/platform.js" async></script>
         <div class="elfsight-app-39d4966e-fb90-4b6c-b2b9-b655635a2248" data-elfsight-app-lazy></div>
+        <br><br>
         <!--==============================
     Team Area
     ==============================-->
@@ -1475,84 +1477,7 @@
         <!--==============================
     Appointment Area
     ==============================-->
-        <br><br>
-        <section class="  " data-overlay="title" data-opacity="6">
-            <div class="parallax" data-parallax-image="assets/img/bg/appi-bg-1-1.jpg"></div>
-            <div class="container">
-                <div class="row gx-60">
-                    <div class="col-xl-6 align-self-center space-extra wow fadeInUp" data-wow-delay="0.2s">
-                        <h3 class="h4 text-white mt-n1 mb-4 pb-2">Opening Hours Of Ohmyglowclinic</h3>
-                        <div class="table-style2">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th>Monday - Sunday</th>
-                                        <td>10:30am - 7:30pm</td>
-                                    </tr>
-                                    <!-- <tr>
-                                    <th>Friday - Sunday</th>
-                                    <td>10am - 05pm</td>
-                                </tr> -->
-                                    <tr>
-                                        <th>Phone</th>
-                                        <td><a href="tel:+918699361156" class="text-inherit">+91 8699361156</a> / <a
-                                                href="tel:+916399910000" class="text-inherit">+91 6399910000</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>Email</th>
-                                        <td><a href="mailto:ohmyglowclinic@gmail.com"
-                                                class="text-inherit">ohmyglowclinic@gmail.com</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <form action="#" class="form-style7">
-                            <div class="media-style6">
-                                <div class="media-icon"><i class="fal fa-calendar-alt"></i></div>
-                                <div class="media-bod">
-                                    <span class="media-label">Get relax any day & any Time</span>
-                                    <p class="media-title"> Book Free Skin Consultation</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <input type="text" placeholder="First Name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" placeholder="Last Name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="email" placeholder="Email Address">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="number" placeholder="Phone Number">
-                                </div>
-                                <div class="form-group col-12">
-                                    <select>
-                                        <option disabled hidden selected>Select Subject</option>
-                                        <option>Sports Massage</option>
-                                        <option>Stone Massage</option>
-                                        <option>Head Massage</option>
-                                        <option>Head Massage</option>
-                                        <option>Facial &amp; Massage</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-12">
-                                    <input type="text" autocomplete="off" class="form-control date-pick"
-                                        placeholder="Select Date">
-                                </div>
-                                <div class="form-btn col-12">
-                                    <button class="vs-btn" type="submit"> Book Free Skin Consultation</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </section><!--==============================
+        <!--==============================
     Blog Area
     ==============================-->
         <!-- <section class=" space-top space-extra-bottom">
@@ -1669,25 +1594,29 @@
                     </p>
 
 
-                    <form class="omgcp-form">
+                    <form class="omgcp-form" id="omgcpForm">
 
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
 
-
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="tel" placeholder="Phone Number" required>
-                        <!-- GENDER SELECT (INSIDE FORM) -->
+                        <!-- GENDER SELECT -->
                         <div class="omgcp-gender-row">
-                            <label class="omgcp-gender-option">
-                                <input type="radio" name="gender" value="Men" checked>
+
+                            <input type="radio" name="gender" id="gender-men" value="Men" checked hidden>
+                            <label for="gender-men" class="gender-card">
+                                <i class="fas fa-mars"></i>
                                 <span>Men</span>
                             </label>
 
-                            <label class="omgcp-gender-option">
-                                <input type="radio" name="gender" value="Women">
+                            <input type="radio" name="gender" id="gender-women" value="Women" hidden>
+                            <label for="gender-women" class="gender-card">
+                                <i class="fas fa-venus"></i>
                                 <span>Women</span>
                             </label>
+
                         </div>
-                        <select required>
+
+                        <select name="service" required>
                             <option value="">Select Service</option>
                             <option>Skin Treatment</option>
                             <option>Hair Treatment</option>
@@ -1698,6 +1627,7 @@
                         <button type="submit" class="omgcp-submit">
                             Book Appointment
                         </button>
+
                     </form>
 
                 </div>
@@ -1870,13 +1800,26 @@
         </script>
         <script>
             (function () {
-                const KEY = "omgcp_popup_views";
+
+                /* =========================
+                   CONFIG
+                ========================= */
+                const POPUP_KEY = "omgcp_popup_views";
                 const MAX_VIEWS = 4;
+                const SHEET_URL = "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec";
 
+                /* =========================
+                   ELEMENTS
+                ========================= */
                 const overlay = document.getElementById("omgcpOverlay");
-                const closeBtn = overlay.querySelector(".omgcp-close");
+                const closeBtn = overlay?.querySelector(".omgcp-close");
+                const form = document.getElementById("omgcpForm");
 
-                // Lock & unlock scroll helpers
+                if (!overlay || !form) return;
+
+                /* =========================
+                   SCROLL CONTROL
+                ========================= */
                 function lockScroll() {
                     document.body.style.overflow = "hidden";
                     document.documentElement.style.overflow = "hidden";
@@ -1887,40 +1830,89 @@
                     document.documentElement.style.overflow = "";
                 }
 
-                function openOMGPopup() {
+                /* =========================
+                   POPUP CONTROL
+                ========================= */
+                function openPopup() {
                     overlay.style.display = "flex";
                     lockScroll();
                 }
 
-                function closeOMGPopup() {
+                function closePopup() {
                     overlay.style.display = "none";
                     unlockScroll();
                 }
 
-                // Auto show after 3s (max 4 times)
+                /* =========================
+                   AUTO POPUP (MAX 4 TIMES)
+                ========================= */
                 window.addEventListener("load", () => {
-                    let views = parseInt(localStorage.getItem(KEY) || "0", 10);
+                    const views = parseInt(localStorage.getItem(POPUP_KEY) || "0", 10);
 
                     if (views < MAX_VIEWS) {
                         setTimeout(() => {
-                            openOMGPopup();
-                            localStorage.setItem(KEY, views + 1);
+                            openPopup();
+                            localStorage.setItem(POPUP_KEY, views + 1);
                         }, 3000);
                     }
                 });
 
-                // Manual trigger (usable anywhere)
-                window.openClinicPopup = openOMGPopup;
+                // Manual trigger if needed
+                window.openClinicPopup = openPopup;
 
-                // Close actions
-                closeBtn.addEventListener("click", closeOMGPopup);
+                /* =========================
+                   CLOSE ACTIONS
+                ========================= */
+                closeBtn?.addEventListener("click", closePopup);
 
-                overlay.addEventListener("click", e => {
-                    if (e.target === overlay) closeOMGPopup();
+                overlay.addEventListener("click", (e) => {
+                    if (e.target === overlay) closePopup();
+                });
+
+                /* =========================
+                   FORM SUBMIT (GOOGLE SHEET)
+                ========================= */
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+
+                    const btn = form.querySelector(".omgcp-submit");
+                    if (btn.disabled) return;
+
+                    btn.innerText = "Submitting...";
+                    btn.disabled = true;
+
+                    const formData = new FormData(form);
+
+                    fetch(SHEET_URL, {
+                        method: "POST",
+                        body: formData
+                    })
+                        .then(res => res.text())
+                        .then(res => {
+                            if (res === "success") {
+                                btn.innerText = "Submitted ✓";
+                                form.reset();
+
+                                setTimeout(() => {
+                                    btn.innerText = "Book Appointment";
+                                    btn.disabled = false;
+                                    closePopup();
+                                }, 1800);
+                            } else {
+                                throw new Error("Submission failed");
+                            }
+                        })
+                        .catch(err => {
+                            console.error("Google Sheet Error:", err);
+                            alert("Something went wrong. Please try again.");
+                            btn.innerText = "Book Appointment";
+                            btn.disabled = false;
+                        });
                 });
 
             })();
         </script>
+
 
 
 </body>
