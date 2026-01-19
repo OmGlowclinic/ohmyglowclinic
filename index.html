@@ -2,7 +2,40 @@
 <html lang="en">
 
 <head>
-    <!-- Google Analytics (async already good) -->
+    <!-- =========================
+       BASIC SEO & META
+  ========================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>Oh My Glow Clinic | Premium Skin, Hair & Laser Clinic for Men & Women</title>
+
+    <meta name="description"
+        content="Oh My Glow is a premium skin, hair & laser clinic offering doctor-led treatments for men and women. Choose your personalised aesthetic experience." />
+
+    <meta name="keywords"
+        content="skin clinic, hair clinic, laser clinic, men skin clinic, women skin clinic, aesthetic clinic, Oh My Glow Clinic" />
+
+    <link rel="canonical" href="https://ohmyglowclinic.com/" />
+
+    <!-- =========================
+       OPEN GRAPH (SOCIAL)
+  ========================= -->
+    <meta property="og:title" content="Oh My Glow | Skin, Hair & Laser Clinic for Men & Women" />
+    <meta property="og:description"
+        content="Doctor-led aesthetic treatments for skin, hair & laser. Choose personalised care for men or women." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ohmyglowclinic.com/" />
+    <meta property="og:image" content="https://ohmyglowclinic.com/og-cover.jpg" />
+
+    <!-- =========================
+       FAVICON
+  ========================= -->
+    <link rel="icon" href="womens/assets/img/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- =========================
+       GOOGLE ANALYTICS
+  ========================= -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQW5HPCRSH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -10,18 +43,23 @@
         gtag('js', new Date());
         gtag('config', 'G-PQW5HPCRSH');
     </script>
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" href="womens/assets/img/favicon_io/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="womens/assets/img/favicon_io/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oh My Glow! Skin, Hair and Laser Clinic & Institute </title>
 
-    <!-- 🔥 FAST FONT LOADING -->
+    <!-- =========================
+       FONTS
+  ========================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <!-- =========================
+       PRELOAD IMAGES (LCP)
+  ========================= -->
+    <link rel="preload" as="image" href="mens.webp">
+    <link rel="preload" as="image" href="womens.webp">
+
+    <!-- =========================
+       STYLES
+  ========================= -->
     <style>
         * {
             margin: 0;
@@ -31,45 +69,58 @@
         }
 
         body {
-            min-height: 100vh;
-            background-image: image-set(url("mens/assets/img/bg/Leaf-bg.png") 1x);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
+            min-height: 100svh;
+            background: url("mens/assets/img/bg/Leaf-bg.png") center / cover no-repeat;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            padding: env(safe-area-inset-top) 16px env(safe-area-inset-bottom);
         }
 
-        /* ---------- LOGO ---------- */
-        .logo {
-            margin-bottom: 40px;
-        }
-
-        .logo img {
-            max-width: 240px;
+        main.wrapper {
             width: 100%;
-            height: auto;
+            max-width: 1200px;
+            text-align: center;
         }
 
-        /* ---------- CONTAINER ---------- */
+        /* LOGO */
+        .logo img {
+            max-width: 220px;
+            margin-bottom: 18px;
+        }
+
+        /* INTRO / SEO HEADER */
+        header.intro h1 {
+            color: #fff;
+            font-size: clamp(22px, 3vw, 34px);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header.intro p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 15px;
+            max-width: 620px;
+            margin: 0 auto 48px;
+        }
+
+        /* ENTRY GRID */
         .entry {
             display: flex;
-            gap: 100px;
+            justify-content: center;
+            gap: clamp(40px, 8vw, 100px);
+            flex-wrap: wrap;
         }
 
         .card {
-            text-align: center;
             text-decoration: none;
-            cursor: pointer;
-            will-change: transform;
+            color: #fff;
+            text-align: center;
         }
 
         .gold-frame {
-            width: 320px;
-            height: 320px;
+            width: clamp(220px, 32vw, 320px);
+            aspect-ratio: 1 / 1;
             padding: 12px;
             border-radius: 50%;
             background: linear-gradient(135deg,
@@ -79,60 +130,40 @@
                     #fff1a8,
                     #d4af37);
             display: flex;
-            justify-content: center;
             align-items: center;
-            transition: transform 0.3s ease;
+            justify-content: center;
+            transition: transform .35s ease, box-shadow .35s ease;
         }
 
         .photo {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background-size: cover;
-            background-position: center;
+            object-fit: cover;
         }
 
-        /* .men-photo {
-            background-image: url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
-        }
-
-        .women-photo {
-            background-image: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
-        } */
-
-        .men-photo {
-            background-image: url("mens.webp");
-        }
-
-        .women-photo {
-            background-image: url("womens.webp");
-        }
-
-        .card h1 {
-            margin-top: 26px;
-            color: #fff;
-            font-size: 30px;
-            letter-spacing: 6px;
+        .card h2 {
+            margin-top: 22px;
+            font-size: 22px;
+            letter-spacing: 4px;
             font-weight: 500;
         }
 
-        .card:hover .gold-frame {
-            transform: scale(1.04);
+        .card:hover .gold-frame,
+        .card:active .gold-frame {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
         }
 
-        @media (max-width: 900px) {
-            .entry {
-                flex-direction: column;
-                gap: 60px;
+        /* MOBILE */
+        @media (max-width: 768px) {
+            header.intro p {
+                margin-bottom: 36px;
             }
 
-            .gold-frame {
-                width: 260px;
-                height: 260px;
-            }
-
-            .logo img {
-                max-width: 200px;
+            .card h2 {
+                font-size: 20px;
+                letter-spacing: 3px;
             }
         }
     </style>
@@ -140,29 +171,67 @@
 
 <body>
 
-    <!-- LOGO -->
-    <div class="logo">
-        <img src="https://ohmyglowlcinic.netlify.app/mens/assets/img/logos/oh-my-glow-clinic-white-logo.png"
-            alt="Oh My Glow Clinic Logo" loading="eager">
-    </div>
+    <main class="wrapper">
 
-    <div class="entry">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="https://ohmyglowlcinic.netlify.app/mens/assets/img/logos/oh-my-glow-clinic-white-logo.png"
+                alt="Oh My Glow Clinic Logo">
+        </div>
 
-        <a href="mens/index.html" class="card">
-            <div class="gold-frame">
-                <div class="photo men-photo"></div>
-            </div>
-            <h1>MEN</h1>
-        </a>
+        <!-- SEO INTRO -->
+        <header class="intro">
+            <h1>Premium Skin, Hair & Laser Clinic for Men & Women</h1>
+            <p>
+                Choose a personalised aesthetic experience designed by doctors using advanced,
+                medical-grade technology.
+            </p>
+        </header>
 
-        <a href="womens/index.html" class="card">
-            <div class="gold-frame">
-                <div class="photo women-photo"></div>
-            </div>
-            <h1>WOMEN</h1>
-        </a>
+        <!-- ENTRY OPTIONS -->
+        <section class="entry">
 
-    </div>
+            <a href="mens/index.html" class="card" aria-label="Men Skin and Hair Treatments">
+                <div class="gold-frame">
+                    <img src="mens.webp" alt="Men skin and hair treatments at Oh My Glow Clinic" loading="lazy"
+                        width="320" height="320" class="photo">
+                </div>
+                <h2>Men’s Treatments</h2>
+            </a>
+
+            <a href="womens/index.html" class="card" aria-label="Women Skin and Hair Treatments">
+                <div class="gold-frame">
+                    <img src="womens.webp" alt="Women skin and hair treatments at Oh My Glow Clinic" loading="lazy"
+                        width="320" height="320" class="photo">
+                </div>
+                <h2>Women’s Treatments</h2>
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+       STRUCTURED DATA (SEO)
+  ========================= -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Oh My Glow Clinic",
+    "description": "Premium skin, hair & laser clinic offering doctor-led aesthetic treatments for men and women.",
+    "url": "https://ohmyglowclinic.com/",
+    "medicalSpecialty": [
+      "Dermatology",
+      "Aesthetic Medicine"
+    ],
+    "availableService": [
+      "Skin Treatments",
+      "Hair Treatments",
+      "Laser Treatments"
+    ]
+  }
+  </script>
 
 </body>
 

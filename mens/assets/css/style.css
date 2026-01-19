@@ -15381,3 +15381,530 @@ input[type="radio"]:checked+.gender-card i {
   margin-top: 15px;
   font-size: 14px;
 }
+
+
+/* ==============================
+   MACHINES SECTION STYLING
+================================ */
+
+.bg-light-beige {
+  background: linear-gradient(180deg,
+      rgba(249, 225, 234, 0.35),
+      rgba(255, 255, 255, 0));
+}
+
+.machine-image-frame {
+  padding: 8px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,
+      #d4af37,
+      #fff1a8,
+      #b8962e,
+      #fff1a8,
+      #d4af37);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+}
+
+.machine-image-frame img {
+  width: 100%;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.machine-content h3 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.machine-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.machine-points li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.machine-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #8c1977;
+  font-weight: 700;
+}
+
+/* Mobile spacing */
+@media (max-width: 991px) {
+  .machine-content {
+    margin-top: 30px;
+  }
+}
+
+/* ===============================
+   DOUBLO GOLD VIDEO UI
+================================ */
+
+.omg-hifu-video-section {
+  background: linear-gradient(180deg, #fff, #f6efe6);
+}
+
+.omg-hifu-eyebrow {
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #8c1977;
+  font-weight: 600;
+}
+
+.omg-hifu-title {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.omg-hifu-title span {
+  color: #8c1977;
+}
+
+.omg-hifu-subtext {
+  max-width: 640px;
+  margin: 25px auto;
+  opacity: 0.8;
+}
+
+/* CARD */
+.omg-hifu-video-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  transition: transform .4s ease, box-shadow .4s ease;
+  margin-top: 20px;
+}
+
+.omg-hifu-video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.12);
+}
+
+/* VIDEO SHELL */
+.omg-hifu-video-shell {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.omg-hifu-video-shell video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+/* PLAY BUTTON */
+.omg-hifu-play-btn {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, .1));
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.omg-hifu-play-btn i {
+  font-size: 54px;
+  color: #fff;
+  background: rgba(140, 25, 119, .9);
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s ease;
+}
+
+.omg-hifu-play-btn:hover i {
+  transform: scale(1.08);
+}
+
+/* META */
+.omg-hifu-video-meta {
+  padding: 18px 6px 6px;
+}
+
+.omg-hifu-video-meta h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.omg-hifu-video-meta p {
+  font-size: 14px;
+  opacity: .75;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .omg-hifu-title {
+    font-size: 30px;
+  }
+}
+
+.omg-hifu-video:not(.is-playing)::-webkit-media-controls {
+  display: none !important;
+}
+
+.omg-hifu-video:not(.is-playing) {
+  pointer-events: none;
+}
+
+
+/* ==============================
+   TRUE FULL-WIDTH VIDEO HERO
+============================== */
+
+.omg-video-hero {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw;
+  /* 16:9 */
+  max-height: 100vh;
+  overflow: hidden;
+  background: #000;
+
+  /* BREAK OUT OF ANY CONTAINER */
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Video wrapper */
+.omg-video-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* YouTube iframe – FORCE COVER */
+.omg-video-frame iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100vw;
+  height: 56.25vw;
+
+  min-width: 177.78vh;
+  /* 16:9 trick */
+  min-height: 100vh;
+
+  transform: translate(-50%, -50%);
+  border: 0;
+
+  pointer-events: none;
+  /* no controls */
+}
+
+/* MOBILE – keep landscape */
+@media (max-width: 768px) {
+  .omg-video-hero {
+    height: calc(100vw * 0.5625);
+  }
+
+  .omg-video-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+/* ==============================
+ EXPLORE BY CONCERN – UI
+============================== */
+
+.omg-concern-section {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.omg-concern-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.omg-concern-header h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.omg-view-all {
+  font-size: 14px;
+  color: #8c1977;
+  text-decoration: none;
+}
+
+/* Tabs */
+.omg-concern-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.omg-tab {
+  white-space: nowrap;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.omg-tab.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Panels */
+.omg-panel {
+  display: none;
+}
+
+.omg-panel.active {
+  display: block;
+}
+
+/* Horizontal scroll cards */
+.omg-card-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.omg-service-card {
+  min-width: 260px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+}
+
+.omg-service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.omg-card-body {
+  padding: 14px 16px;
+}
+
+.omg-card-body h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.omg-card-body p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ===========================
+   SINGLE DOCTOR SECTION
+=========================== */
+
+.omg-team-section {
+  padding: 90px 0;
+  background: #faf9f7;
+}
+
+.omg-team-head {
+  max-width: 720px;
+  margin-bottom: 60px;
+}
+
+.omg-eyebrow {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #8c1977;
+  font-weight: 600;
+}
+
+.omg-team-head h2 {
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.omg-team-head p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Doctor Card */
+.omg-doctor-card.single {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 50px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.06);
+}
+
+/* Image */
+.omg-doctor-img img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Info */
+.omg-doctor-info h3 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.omg-role {
+  color: #8c1977;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.omg-meta {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+}
+
+.omg-meta li {
+  font-size: 14.5px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.omg-desc {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .omg-doctor-card.single {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+}
+
+.omg-short-bio {
+  font-size: 15px;
+  color: #555;
+  margin: 12px 0 18px;
+}
+
+.omg-view-more {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8c1977;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.omg-view-more:hover {
+  border-color: #8c1977;
+}
+
+.omg-team-page {
+  padding: 80px 0;
+  background: #fafafa;
+}
+
+.omg-team-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.omg-team-header h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.omg-team-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* CARD */
+.omg-team-card {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 50px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.omg-team-image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.omg-team-content h2 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.omg-team-role {
+  color: #8c1977;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* HIGHLIGHTS */
+.omg-team-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.omg-team-highlights li {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* BIO */
+.omg-team-bio p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .omg-team-card {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+}
