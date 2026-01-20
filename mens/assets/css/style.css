@@ -15809,6 +15809,7 @@ input[type="radio"]:checked+.gender-card i {
   .omg-doctor-card.single {
     grid-template-columns: 1fr;
     padding: 30px;
+    margin-bottom: 25px;
   }
 }
 
@@ -16478,3 +16479,4 @@ input[type="radio"]:checked+.gender-card i {
     display: none;
   }
 }
+
