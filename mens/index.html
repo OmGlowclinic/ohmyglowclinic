@@ -406,147 +406,66 @@
             </div>
         </div>
     </section>
-
-
     <!--==============================
     Service Area
     ==============================-->
-    <section class="space-top space-extra-bottom">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="title-area">
-                        <span class="sec-subtitle5">
-                            What we offer at <span class="inner-text">Oh My Glow Clinic</span>
-                        </span>
+    <div class="omg-ms-wrapper">
+        <section class="space-top space-extra-bottom omg-ms-section">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="title-area">
+                            <span class="sec-subtitle5">
+                                What we treat at <span class="inner-text">Oh My Glow Clinic</span>
+                            </span>
 
-                        <h2 class="sec-title4">
-                            Skin Care Treatments for <span class="inner-text">Men</span>
-                        </h2>
-                        <p class="sec-text">
-                            Targeted treatments for clearer skin, sharper features and youthful appearance.
+                            <h2 class="sec-title4">
+                                Advanced Care for <span class="inner-text">Men</span>
+                            </h2>
 
-                        </p>
+                            <p class="sec-text">
+                                We address common skin, hair, and body concerns experienced by men through
+                                clinically approved treatments, personalised assessments, and technology-driven
+                                solutions focused on safe, effective, and long-term results.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
+
+                <!-- DESKTOP TABS -->
+                <div class="omg-ms-tabs" id="desktopTabs">
+                    <button class="omg-ms-tab active" data-tab="all">All</button>
+                    <button class="omg-ms-tab" data-tab="skin">Skin</button>
+                    <button class="omg-ms-tab" data-tab="hair">Hair</button>
+                    <button class="omg-ms-tab" data-tab="laser">Laser</button>
+                    <button class="omg-ms-tab" data-tab="body">Body</button>
+                    <button class="omg-ms-tab" data-tab="pmu">PMU</button>
+                </div>
+
+                <!-- MOBILE DROPDOWN -->
+                <div class="omg-ms-dropdown">
+                    <select id="mobileTabSelect">
+                        <option value="all">All</option>
+                        <option value="skin">Skin</option>
+                        <option value="hair">Hair</option>
+                        <option value="laser">Laser</option>
+                        <option value="body">Body</option>
+                        <option value="pmu">PMU</option>
+                    </select>
+                </div>
+
+
+                <div class="omg-ms-grid" id="serviceGrid"></div>
+                <br><br>
+                <center><button class="omg-load-more" id="loadMoreBtn">
+                        Show More Treatments
+                    </button></center>
+                <br><br><br>
             </div>
-
-            <!-- Carousel -->
-            <div class="row vs-carousel" data-slide-show="3" data-md-slide-show="2" data-center-mode="true"
-                data-dots="true">
-
-                <!-- OMG Signature MediFacials -->
-                <div class="col-lg-4">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-1.jpg" alt="OMG Signature MediFacials">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title h4">
-                                OMG 7 Signature MediFacials
-                            </h3>
-                            <p class="service-text">
-                                Advanced medi-facials including Fire & Ice, Hydra Glow, Photo Facial, OxyGlow,
-                                Glass Glow and more for instant radiance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Acne & Acne Scars -->
-                <div class="col-lg-4">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-2.jpg" alt="Acne Treatments">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title h4">
-                                Acne & Acne Scar Treatments
-                            </h3>
-                            <p class="service-text">
-                                Clinical treatments to control active acne, reduce scars, and prevent future breakouts.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pigmentation -->
-                <div class="col-lg-4">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-3.jpg" alt="Pigmentation Treatments">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title h4">
-                                Pigmentation Treatments
-                            </h3>
-                            <p class="service-text">
-                                Targeted solutions for dark spots, melasma, tanning, and uneven skin tone.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Anti-Ageing -->
-                <div class="col-lg-4">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-4.jpg" alt="Anti-Ageing Treatments">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title h4">
-                                Anti-Ageing Treatments
-                            </h3>
-                            <p class="service-text">
-                                Advanced therapies to reduce fine lines, wrinkles, and restore skin firmness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Injectables -->
-                <div class="col-lg-4">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-5.jpg" alt="Injectables">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title h4">
-                                Injectables (Botox, Fillers, Threads)
-                            </h3>
-                            <p class="service-text">
-                                Doctor-administered injectables to lift, contour, and rejuvenate facial features.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chemical Peels -->
-                <div class="col-lg-4">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-6.jpg" alt="Chemical Peels">
-                        </div>
-                        <div class="service-content">
-                            <h3 class="service-title h4">
-                                Chemical Peels
-                            </h3>
-                            <p class="service-text">
-                                Medical-grade peels to improve texture, clarity, pigmentation, and skin renewal.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Divider -->
-    <div class="divider-style1  ">
-        <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-    </div><!--==============================
+        </section>
+    </div>
+    <!--==============================
     About Area
     ==============================-->
     <section class="space">
@@ -577,10 +496,13 @@
                         Trusted Skin, Hair & Laser Clinic in <span class="inner-text">Chandigarh</span>
                     </h2>
 
-                    <p class="sec-text2">
-                        Oh My Glow Clinic is a trusted skin, hair & laser clinic in Chandigarh, known for delivering
-                        visible, safe and medically-driven aesthetic results. Led by experienced doctors, we combine
-                        US-FDA approved technologies, advanced protocols and personalised treatment plans for Men.
+                    <p class="sec-text">
+                        Oh My Glow Clinic is a trusted skin, hair & laser clinic in Chandigarh, known for
+                        delivering
+                        visible, safe and medically-driven aesthetic results. Led by experienced doctors, we
+                        combine
+                        US-FDA approved technologies, advanced protocols and personalised treatment plans for
+                        Men.
                     </p>
 
                     <!-- What makes us different -->
@@ -598,8 +520,9 @@
                     </div>
 
                     <!-- Closing Paragraph -->
-                    <p class="sec-text2 mt-20">
-                        Whether you are looking for PRP hair treatment in Chandigarh, laser hair reduction, HydraFacial,
+                    <p class="sec-text mt-20">
+                        Whether you are looking for PRP hair treatment in Chandigarh, laser hair reduction,
+                        HydraFacial,
                         acne scar treatment or weight loss programs, Oh My Glow Clinic ensures natural-looking,
                         long-lasting results.
                     </p>
@@ -608,567 +531,458 @@
             </div>
         </div>
     </section>
-    <!-- Divider -->
-    <div class="divider-style1  ">
-        <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-    </div>
-    <section class="space">
-        <div class="container">
-
-            <!-- Section Heading -->
-            <div class="row justify-content-center text-center mb-50">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.2s">
-                    <span class="sec-subtitle5">
-                        Body Care <span class="inner-text">Expertise</span>
-                    </span>
-                    <h2 class="sec-title4">
-                        Body Treatments for <span class="inner-text">Men</span>
-                    </h2>
-                    <p class="sec-text2">
-                        Non-invasive body shaping and fat reduction solutions for men.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Treatments Grid -->
-            <div class="row gy-30">
-
-                <!-- Card 1 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-7.jpg" alt="Weight Loss Programs">
-                        </div>
-                        <div class="service-content text-center">
-                            <h3 class="service-title h4">Weight Loss Programs</h3>
-                            <p class="service-text">
-                                Doctor-supervised programs designed for safe, sustainable, and long-term weight loss.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-8.jpg" alt="Inch Loss Programs">
-                        </div>
-                        <div class="service-content text-center">
-                            <h3 class="service-title h4">Inch Loss Programs</h3>
-                            <p class="service-text">
-                                Advanced inch-loss solutions to reshape, tone, and refine body contours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-9.jpg" alt="Body Contouring">
-                        </div>
-                        <div class="service-content text-center">
-                            <h3 class="service-title h4">Body Contouring</h3>
-                            <p class="service-text">
-                                Non-invasive body sculpting treatments to enhance shape and definition.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp">
-                    <div class="service-style3">
-                        <div class="service-img">
-                            <img src="assets/img/service/sr-4-10.jpg" alt="Spot Fat Reduction">
-                        </div>
-                        <div class="service-content text-center">
-                            <h3 class="service-title h4">Spot Fat Reduction</h3>
-                            <p class="service-text">
-                                Targeted fat-reduction treatments for stubborn and resistant problem areas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- Divider -->
-    <div class="divider-style1  ">
-        <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-    </div>
-    <section class="space hair-balance-section">
-        <div class="container">
-
-            <!-- Section Heading -->
-            <div class="row justify-content-center text-center mb-50">
-                <div class="col-lg-8">
-                    <span class="sec-subtitle5">
-                        Hair Care <span class="inner-text">Expertise</span>
-                    </span>
-                    <h2 class="sec-title4">
-                        Hair Treatments for <span class="inner-text">Men</span>
-                    </h2>
-                    <p class="sec-text2">
-                        Advanced medical solutions for hair loss and thinning.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Balanced Layout -->
-            <div class="row align-items-center gx-60 hair-flow-scope">
-
-                <!-- Left Image -->
-                <div class="col-lg-6 mb-40 mb-lg-0">
-                    <div class="hair-flow-image">
-                        <img src="assets/img/about/ab-5-3.jpeg" alt="Hair Treatments">
-                    </div>
-                </div>
-
-                <!-- Right Flow -->
-                <div class="col-lg-6">
-                    <div class="hair-flow">
-
-                        <div class="hair-flow-item">
-                            <span class="flow-node">01</span>
-                            <div class="flow-card">
-                                <h4>Hair Fall Treatment</h4>
-                                <p>
-                                    Doctor-led diagnosis with personalised treatments to safely control excessive hair
-                                    fall.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="hair-flow-item">
-                            <span class="flow-node">02</span>
-                            <div class="flow-card">
-                                <h4>Hair Thinning Treatment</h4>
-                                <p>
-                                    Advanced therapies designed to improve hair density, strength, and long-term scalp
-                                    health.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="hair-flow-item">
-                            <span class="flow-node">03</span>
-                            <div class="flow-card">
-                                <h4>Hair Revital Boost Therapy</h4>
-                                <p>
-                                    Nutrient-rich revitalisation treatments to strengthen follicles and support healthy
-                                    regrowth.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="hair-flow-item">
-                            <span class="flow-node">04</span>
-                            <div class="flow-card">
-                                <h4>GFC / PRP Hair Treatment</h4>
-                                <p>
-                                    Clinically proven platelet-based therapies to stimulate natural hair regeneration
-                                    and growth.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Divider -->
-    <div class="divider-style1  ">
-        <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-    </div>
-    <section class="space">
-        <div class="container">
-
-            <!-- Section Heading -->
-            <div class="row justify-content-center text-center mb-50">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.2s">
-                    <span class="sec-subtitle5">
-                        Beauty <span class="inner-text">Enhancement</span>
-                    </span>
-                    <h2 class="sec-title4">
-                        PMU – Permanent Makeup for <span class="inner-text">Men</span>
-                    </h2>
-                    <p class="sec-text2">
-                        Precision grooming and enhancement treatments.
-
-                    </p>
-                </div>
-            </div>
-
-            <!-- PMU Layout -->
-            <div class="row align-items-center gx-50 pmu-scope">
-
-                <!-- Left Treatments -->
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-
-                    <div class="media-style4 pmu-card mb-30 text-end">
-                        <div class="media-body">
-                            <h4 class="mb-5">Beard Shaping</h4>
-                            <p class="media-text">
-                                Precise shaping and contouring to define a clean, well-groomed beard line.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="media-style4 pmu-card text-end">
-                        <div class="media-body">
-                            <h4 class="mb-5">Lip Tint</h4>
-                            <p class="media-text">
-                                Natural-looking lip enhancement for subtle colour, definition, and balance.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Center Image -->
-                <div class="col-lg-4 text-center wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="img-box6 pmu-image gold-frame">
-                        <div class="img-1">
-                            <img src="assets/img/about/ab-3-1.jpeg" alt="PMU Treatment">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Treatments -->
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-
-                    <div class="media-style4 pmu-card mb-30">
-                        <div class="media-body">
-                            <h4 class="mb-5">Scalp Micropigmentation</h4>
-                            <p class="media-text">
-                                Advanced pigment technique to create the appearance of fuller, denser hair.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-    <!-- Divider -->
-    <div class="divider-style1  ">
-        <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-    </div>
-    <section class="space">
-        <div class="container">
-
-            <!-- INTRO HEADER -->
-            <div class="row justify-content-center text-center mb-80">
-                <div class="col-lg-9 wow fadeInUp">
-                    <span class="sec-subtitle5 mb-10 d-block">
-                        Precision <span class="inner-text">Laser Care</span>
-                    </span>
-                    <h2 class="sec-title4 mb-20">
-                        Laser Hair Reduction for <span class="inner-text">Men</span>
-                    </h2>
-                    <p class="sec-text2">
-                        Painless, long-term hair reduction using advanced laser technology
-                        designed for comfort, safety, and visible results.
-                    </p>
-                </div>
-            </div>
-
-            <!-- INTRO NOTE -->
-            <div class="row justify-content-center mb-100">
-                <div class="col-lg-8 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <p class="sec-text2">
-                        Clinically guided treatments tailored to your skin type, hair texture,
-                        and lifestyle — ensuring results that look natural and feel effortless.
-                    </p>
-                </div>
-            </div>
-
-            <!-- LHR EXPERIENCE -->
-            <div class="row align-items-center gx-60 mb-120">
-
-                <!-- IMAGE -->
-                <div class="col-lg-5 mb-40 mb-lg-0 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="img-box6">
-                        <div class="img-1 gold-frame">
-                            <img src="assets/img/about/ab-5-1.2.jpg" alt="Laser Hair Reduction">
-                        </div>
-                        <div class="img-2 ani-moving-x">
-                            <img src="assets/img/shape/leaf-1-9.png" alt="floral">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7 wow fadeInUp laser-areas-scope" data-wow-delay="0.4s">
-
-                    <h3 class="mb-50 text-center text-lg-start">
-                        Laser Hair Reduction Areas
-                    </h3>
-
-                    <!-- AREA GRID -->
-                    <div class="row gy-40 gx-30">
-
-                        <div class="col-md-6">
-                            <div class="laser-area-card">
-                                <img src="assets/img/service/beard.png" alt="Beard Shaping Laser">
-                                <h5>Beard Shaping Laser</h5>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="laser-area-card">
-                                <img src="assets/img/service/chest.png" alt="Chest Laser Hair Reduction">
-                                <h5>Chest Laser Hair Reduction</h5>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="laser-area-card">
-                                <img src="assets/img/service/back.png" alt="Back & Shoulder Laser Hair Reduction">
-                                <h5>Back & Shoulder Laser Hair Reduction</h5>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="laser-area-card">
-                                <img src="assets/img/service/full-body.png" alt="Full Body Laser Hair Reduction">
-                                <h5>Full Body Laser Hair Reduction</h5>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-        <br><br><br><br>
-        <!-- ==============================
+    <br><br><br><br>
+    <!-- ==============================
      ADVANCED TECHNOLOGY SECTION
 ================================ -->
-        <section class="space bg-light-beige">
-            <div class="container">
+    <section class="space bg-light-beige">
+        <div class="container">
 
-                <!-- Section Header -->
-                <div class="text-center mb-60">
-                    <span class="sec-subtitle">Advanced Aesthetic Technology</span>
-                    <h2 class="sec-title2">
-                        World-Class <span class="text-theme">Machines</span> We Use
-                    </h2>
-                    <p class="sec-text2">
-                        FDA-approved, globally trusted technologies delivering safe, visible & long-lasting results.
-                    </p>
-                </div>
-                <br><br>
-
-                <!-- MACHINE 1 : DOUBLO GOLD -->
-                <div class="row align-items-center mb-80">
-                    <div class="col-lg-6">
-                        <div class="machine-image-frame">
-                            <img src="assets/img/product/Doublo-Gold-hIFU-machine.jpg" alt="Doublo Gold HIFU Machine">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="machine-content">
-                            <h3>Doublo Gold – The Gold Standard in HIFU Technology</h3>
-                            <ul class="machine-points">
-                                <li>Tightening, Lifting & Contouring with Precision</li>
-                                <li>Advanced High-Intensity Focused Ultrasound (HIFU)</li>
-                                <li>Non-Surgical | High-Performance | No Downtime</li>
-                                <li>Visible, Natural & Long-Lasting Results</li>
-                            </ul>
-                            <p class="sec-text2">
-                                Defy ageing and redefine facial structure with one of the world’s most trusted HIFU
-                                systems.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <br><br><br>
-
-                <!-- MACHINE 2 : VIVACE MNRF -->
-                <div class="row align-items-center flex-row-reverse">
-                    <div class="col-lg-6">
-                        <div class="machine-image-frame">
-                            <img src="assets/img/product/Vivace-MNRF.jpg" alt="Vivace MNRF Machine">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="machine-content">
-                            <h3>Vivace MNRF – Flawless Skin, Zero Downtime</h3>
-                            <ul class="machine-points">
-                                <li>Revolutionary Microneedling Radiofrequency (MNRF)</li>
-                                <li>Targets Acne Scars, Wrinkles & Skin Laxity</li>
-                                <li>No Pain. No Downtime. Clinically Proven.</li>
-                                <li>One Solution for Rejuvenation & Tightening</li>
-                            </ul>
-                            <p class="sec-text2">
-                                From acne scars to youthful firmness, Vivace delivers smooth, glowing skin with
-                                unmatched comfort.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- Section Header -->
+            <div class="text-center mb-60">
+                <span class="sec-subtitle5">
+                    Advanced Aesthetic <span class="inner-text">Technology</span>
+                </span>
+                <h2 class="sec-title2">
+                    World-Class <span class="text-theme">Machines</span> We Use
+                </h2>
+                <p class="sec-text">
+                    FDA-approved, globally trusted technologies delivering safe, visible & long-lasting
+                    results.
+                </p>
             </div>
-        </section>
-     
-        <!-- Divider -->
-        <div class="divider-style1  ">
-            <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-        </div>
-        <br><br>
-        <!-- TRANSITION -->
-        <section class="exclusive-experiences-section">
-            <div class="container">
+            <br><br>
 
-                <!-- TRANSITION -->
-                <div class="row justify-content-center text-center mb-100">
-                    <div class="col-lg-8">
-                        <h3 class="mb-15">
-                            Beyond Laser — Curated Experiences for Men
-                        </h3>
-                        <p class="sec-text2">
-                            Thoughtfully designed programs that complement your lifestyle,
-                            milestones, and wellness goals.
+            <!-- MACHINE 1 : DOUBLO GOLD -->
+            <div class="row align-items-center mb-80">
+                <div class="col-lg-6">
+                    <div class="machine-image-frame">
+                        <img src="assets/img/product/Doublo-Gold-hIFU-machine.jpg" alt="Doublo Gold HIFU Machine">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="machine-content">
+                        <h3>Doublo Gold – The Gold Standard in HIFU Technology</h3>
+                        <ul class="machine-points">
+                            <li>Tightening, Lifting & Contouring with Precision</li>
+                            <li>Advanced High-Intensity Focused Ultrasound (HIFU)</li>
+                            <li>Non-Surgical | High-Performance | No Downtime</li>
+                            <li>Visible, Natural & Long-Lasting Results</li>
+                        </ul>
+                        <p class="sec-text">
+                            Defy ageing and redefine facial structure with one of the world’s most trusted
+                            HIFU
+                            systems.
                         </p>
                     </div>
                 </div>
-
-                <!-- EXPERIENCE 1 -->
-                <div class="row align-items-center experience-row mb-80">
-                    <div class="col-lg-6">
-                        <div class="experience-image-frame">
-                            <img src="assets/img/service/iv-drip-therapy-imported-from-japan.jpg" alt="IV Drip Therapy">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <span class="experience-tag">Signature Wellness</span>
-                            <h4>IV Drip Therapy</h4>
-                            <p class="sec-text2">
-                                Advanced intravenous therapy designed to improve skin glow, hydration,
-                                energy levels, and overall wellness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EXPERIENCE 2 (REVERSE) -->
-                <div class="row align-items-center experience-row reverse mb-80">
-                    <div class="col-lg-6">
-                        <div class="experience-image-frame">
-                            <img src="assets/img/service/body-brightening-treatments.jpg"
-                                alt="Body Brightening Treatments">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <span class="experience-tag">Skin Enhancement</span>
-                            <h4>Body Brightening Treatments</h4>
-                            <p class="sec-text2">
-                                Medical-grade treatments to improve body skin tone, reduce pigmentation,
-                                and enhance overall radiance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EXPERIENCE 3 -->
-                <div class="row align-items-center experience-row">
-                    <div class="col-lg-6">
-                        <div class="experience-image-frame">
-                            <img src="assets/img/service/Pre-Wedding-Groom-packages.jpg"
-                                alt="Pre-Wedding Groom Packages">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <span class="experience-tag">Groom Signature</span>
-                            <h4>Pre-Wedding Groom Packages</h4>
-                            <p class="sec-text2">
-                                Complete grooming and skin preparation programs designed to help grooms
-                                look confident, refreshed, and camera-ready.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
-        <br><br>
-        <section class="omg-team-section">
-            <div class="container">
+            <br><br><br>
 
-                <!-- Section Heading -->
-                <div class="omg-team-head">
-                    <span class="omg-eyebrow">OUR LEAD MEDICAL EXPERT</span>
-                    <h2>Doctor-Led Care at Oh My Glow Clinic</h2>
-                    <p>Every treatment is guided by an experienced dermatologist.</p>
-                </div>
-
-                <!-- Single Doctor Card -->
-                <div class="omg-doctor-card single">
-
-                    <!-- Image -->
-                    <div class="omg-doctor-img">
-                        <img src="assets/img/team/dr-harji-kaur.jpg" alt="Dr Harji Kaur">
+            <!-- MACHINE 2 : VIVACE MNRF -->
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="machine-image-frame">
+                        <img src="assets/img/product/Vivace-MNRF.jpg" alt="Vivace MNRF Machine">
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="machine-content">
+                        <h3>Vivace MNRF – Flawless Skin, Zero Downtime</h3>
+                        <ul class="machine-points">
+                            <li>Revolutionary Microneedling Radiofrequency (MNRF)</li>
+                            <li>Targets Acne Scars, Wrinkles & Skin Laxity</li>
+                            <li>No Pain. No Downtime. Clinically Proven.</li>
+                            <li>One Solution for Rejuvenation & Tightening</li>
+                        </ul>
+                        <p class="sec-text">
+                            From acne scars to youthful firmness, Vivace delivers smooth, glowing skin with
+                            unmatched comfort.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Content -->
-                    <div class="omg-doctor-info">
-                        <h3>Dr. Harji Kaur</h3>
-                        <span class="omg-role">
-                            Dermatologist • Cosmetologist • Venereologist
+        </div>
+    </section>
+    <!-- =========================
+RESULTS THAT SPEAK – SECTION
+========================= -->
+
+    <section class="omg-results-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="title-area">
+                        <span class="sec-subtitle5">
+                            Treatment Results at <span class="inner-text">Oh My Glow Clinic</span>
                         </span>
 
-                        <!-- Meta -->
-                        <ul class="omg-meta">
-                            <li><strong>Experience:</strong> 21+ Years</li>
-                            <li><strong>Qualification:</strong> MBBS, DNB (Dermatology)</li>
-                            <li><strong>International Training:</strong> Dip GUM (UK)</li>
-                        </ul>
+                        <h2 class="sec-title4">
+                            Visible <span style="color: #831e6f;">Improvements.</span>
+                        </h2>
 
-                        <!-- SHORT BIO (6–7 WORDS ONLY) -->
-                        <p class="omg-short-bio">
-                            Trusted dermatologist with 21+ years experience.
+                        <p class="sec-text">
+                            Our before-and-after results demonstrate the effectiveness of personalised
+                            treatment plans designed through detailed clinical assessment. Each outcome
+                            reflects the use of medically approved procedures, advanced technology, and
+                            professional supervision, with a focus on safe, natural, and measurable
+                            improvements.
                         </p>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- CTA -->
-                        <a href="team.html#dr-harji-kaur" class="omg-view-more">
-                            View Full Profile →
-                        </a>
+            <div class="omg-results-wrap">
+                <!-- Desktop Arrows -->
+                <button class="omg-arrow left" onclick="slideResults(-1)">‹</button>
+                <button class="omg-arrow right" onclick="slideResults(1)">›</button>
+
+                <!-- Cards Row -->
+                <div class="omg-results-row" id="resultsRow">
+
+                    <!-- CARD -->
+                    <div class="omg-result-card">
+                        <div class="omg-result-title">Laser Hair Reduction</div>
+                        <div class="omg-result-sub">
+                            Visible hair reduction, smoother skin, zero razor dependency.
+                        </div>
+
+                        <div class="ba-container">
+                            <img src="https://picsum.photos/600/500?1">
+                            <img src="https://picsum.photos/600/500?2" class="ba-after">
+                            <div class="ba-handle"></div>
+                            <span class="ba-label ba-before">Before</span>
+                            <span class="ba-label ba-after-label">After</span>
+                        </div>
+
+                        <div class="drag-hint">← Drag to compare →</div>
+                        <div class="omg-result-footer">Result after 5 clinical sessions</div>
+                    </div>
+
+                    <div class="omg-result-card">
+                        <div class="omg-result-title">Hair GFC Therapy</div>
+                        <div class="omg-result-sub">
+                            Reduced hair fall, thicker density, visible regrowth.
+                        </div>
+
+                        <div class="ba-container">
+                            <img src="https://picsum.photos/600/500?3">
+                            <img src="https://picsum.photos/600/500?4" class="ba-after">
+                            <div class="ba-handle"></div>
+                            <span class="ba-label ba-before">Before</span>
+                            <span class="ba-label ba-after-label">After</span>
+                        </div>
+
+                        <div class="drag-hint">← Drag to compare →</div>
+                        <div class="omg-result-footer">Result after 6 growth cycles</div>
+                    </div>
+
+                    <div class="omg-result-card">
+                        <div class="omg-result-title">PRP Hair Treatment</div>
+                        <div class="omg-result-sub">
+                            Stronger roots, healthier scalp, long-term improvement.
+                        </div>
+
+                        <div class="ba-container">
+                            <img src="https://picsum.photos/600/500?5">
+                            <img src="https://picsum.photos/600/500?6" class="ba-after">
+                            <div class="ba-handle"></div>
+                            <span class="ba-label ba-before">Before</span>
+                            <span class="ba-label ba-after-label">After</span>
+                        </div>
+
+                        <div class="drag-hint">← Drag to compare →</div>
+                        <div class="omg-result-footer">Result after 9 PRP sessions</div>
+                    </div>
+
+                    <div class="omg-result-card">
+                        <div class="omg-result-title">Body Slimming Program</div>
+                        <div class="omg-result-sub">
+                            Inch loss, better contouring, visible reshaping.
+                        </div>
+
+                        <div class="ba-container">
+                            <img src="https://picsum.photos/600/500?7">
+                            <img src="https://picsum.photos/600/500?8" class="ba-after">
+                            <div class="ba-handle"></div>
+                            <span class="ba-label ba-before">Before</span>
+                            <span class="ba-label ba-after-label">After</span>
+                        </div>
+
+                        <div class="drag-hint">← Drag to compare →</div>
+                        <div class="omg-result-footer">Result after 7 transformation sessions</div>
                     </div>
 
                 </div>
-            </div>
-        </section>
-        <br><br>
-        <!-- Divider -->
-        <div class="divider-style1  ">
-            <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
-        </div>
-        <br><br>
 
-        <!--==============================
+                <!-- Mobile Dots -->
+                <div class="omg-carousel-dots" id="resultsDots"></div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <!-- TRANSITION -->
+    <section class="exclusive-experiences-section">
+        <div class="container">
+
+            <!-- TRANSITION -->
+            <div class="row justify-content-center text-center mb-100">
+                <div class="col-lg-8">
+                    <span class="sec-subtitle5">
+                        Beyond Laser at <span class="inner-text">Oh My Glow Clinic</span>
+                    </span>
+                    <h2 class="sec-title4">
+                        Curated Experiences for <span class="inner-text">Men</span>
+                    </h2>
+                    <p class="sec-text">
+                        Thoughtfully designed programs that go beyond standalone treatments.
+                        Each experience is curated to align with individual lifestyles, personal
+                        milestones, and long-term wellness objectives, ensuring a structured,
+                        balanced, and clinically guided approach to self-care.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <!-- EXPERIENCE 1 -->
+            <div class="row align-items-center experience-row mb-80">
+                <div class="col-lg-6">
+                    <div class="experience-image-frame">
+                        <img src="assets/img/service/iv-drip-therapy-imported-from-japan.jpg" alt="IV Drip Therapy">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <span class="experience-tag">Signature Wellness</span>
+                        <h4>IV Drip Therapy</h4>
+                        <p class="sec-text">
+                            Advanced intravenous therapy designed to improve skin glow, hydration,
+                            energy levels, and overall wellness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE 2 (REVERSE) -->
+            <div class="row align-items-center experience-row reverse mb-80">
+                <div class="col-lg-6">
+                    <div class="experience-image-frame">
+                        <img src="assets/img/service/body-brightening-treatments.jpg" alt="Body Brightening Treatments">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <span class="experience-tag">Skin Enhancement</span>
+                        <h4>Body Brightening Treatments</h4>
+                        <p class="sec-text">
+                            Medical-grade treatments to improve body skin tone, reduce pigmentation,
+                            and enhance overall radiance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE 3 -->
+            <div class="row align-items-center experience-row">
+                <div class="col-lg-6">
+                    <div class="experience-image-frame">
+                        <img src="assets/img/service/Pre-Wedding-Groom-packages.jpg" alt="Pre-Wedding Groom Packages">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <span class="experience-tag">Groom Signature</span>
+                        <h4>Pre-Wedding Groom Packages</h4>
+                        <p class="sec-text">
+                            Complete grooming and skin preparation programs designed to help grooms
+                            look confident, refreshed, and camera-ready.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <br><br><br><br>
+    <div class="review-section">
+        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-39d4966e-fb90-4b6c-b2b9-b655635a2248" data-elfsight-app-lazy></div>
+    </div><br><br><br><br>
+    <!--==============================
+    Gallery Area
+    ==============================-->
+    <section class=" space-bottom omg-results-section">
+        <div class="shape-mockup jump d-none d-xxl-block" data-left="1%" data-top="-5%"><img
+                src="assets/img/shape/flower-1-2.png" alt="flower"></div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp wow-animated" data-wow-delay="0.2s">
+                    <div class="title-area">
+                        <h2 class="sec-title4">Inside Oh My Glow Clinic</h2>
+                        <p class="sec-text">A glimpse into our calm, hygienic, and thoughtfully designed
+                            spaces
+                            where
+                            advanced care meets comfort.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row filter-active gx-4 gy-4 wow fadeInUp" data-wow-delay="0.3s">
+
+                <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
+                    <div class="gallery-style3 image-scale-hover">
+                        <a href="/womens/assets/img/gallery/gal-5-1.jpg" class="icon-btn popup-image">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <img src="/womens/assets/img/gallery/gal-5-1.jpg" alt="Gallery Image" class="w-100">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
+                    <div class="gallery-style3 image-scale-hover">
+                        <a href="/womens/assets/img/gallery/gal-5-2.jpg" class="icon-btn popup-image">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <img src="/womens/assets/img/gallery/gal-5-2.jpg" alt="Gallery Image" class="w-100">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
+                    <div class="gallery-style3 image-scale-hover">
+                        <a href="/womens/assets/img/gallery/gal-5-3.jpg" class="icon-btn popup-image">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <img src="/womens/assets/img/gallery/gal-5-3.jpg" alt="Gallery Image" class="w-100">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
+                    <div class="gallery-style3 image-scale-hover">
+                        <a href="/womens/assets/img/gallery/gal-5-4.jpg" class="icon-btn popup-image">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <img src="/womens/assets/img/gallery/gal-5-4.jpg" alt="Gallery Image" class="w-100">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
+                    <div class="gallery-style3 image-scale-hover">
+                        <a href="/womens/assets/img/gallery/gal-5-5.jpg" class="icon-btn popup-image">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <img src="/womens/assets/img/gallery/gal-5-5.jpg" alt="Gallery Image" class="w-100">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
+                    <div class="gallery-style3 image-scale-hover">
+                        <a href="/womens/assets/img/gallery/gal-5-6.jpg" class="icon-btn popup-image">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <img src="/womens/assets/img/gallery/gal-5-6.jpg" alt="Gallery Image" class="w-100">
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <div style="text-align:center; margin-top:50px;">
+                    <a href="contact.html" style="
+            display:inline-block;
+            padding:14px 38px;
+            background:#8e1b7a;
+            color:#ffffff;
+            text-decoration:none;
+            font-weight:600;
+            letter-spacing:1px;
+            text-transform:uppercase;
+            border-radius:0;
+            transition:all 0.3s ease;
+       " onmouseover="this.style.background='#000000';" onmouseout="this.style.background='#8e1b7a';">
+                        View More
+                    </a>
+                </div> -->
+
+    </section>
+
+    <!--==============================
+    Service Area
+    ==============================-->
+
+
+    <!-- Divider -->
+    <!-- <div class="divider-style1  ">
+        <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
+    </div> -->
+
+    <section class="omg-team-section">
+        <div class="container">
+
+            <div class="row justify-content-center text-center">
+                <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="title-area">
+                        <span class="sec-subtitle5">
+                            Medical Leadership at <span class="inner-text">Oh My Glow Clinic</span>
+                        </span>
+
+                        <h2 class="sec-title4">
+                            Our Lead <span style="color: #831e6f;">Medical Expert</span>
+                        </h2>
+
+                        <p class="sec-text">
+                            Clinical excellence guided by an experienced medical professional, ensuring every treatment
+                            is delivered with precision, safety, and adherence to established medical standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Single Doctor Card -->
+            <div class="omg-doctor-card single">
+
+                <!-- Image -->
+                <div class="omg-doctor-img">
+                    <img src="assets/img/team/dr-harji-kaur.jpg" alt="Dr Harji Kaur">
+                </div>
+
+                <!-- Content -->
+                <div class="omg-doctor-info">
+                    <h3>Dr. Harji Kaur</h3>
+                    <span class="omg-role">
+                        Dermatologist • Cosmetologist • Venereologist
+                    </span>
+
+                    <!-- Meta -->
+                    <ul class="omg-meta">
+                        <li><strong>Experience:</strong> 21+ Years</li>
+                        <li><strong>Qualification:</strong> MBBS, DNB (Dermatology)</li>
+                        <li><strong>International Training:</strong> Dip GUM (UK)</li>
+                    </ul>
+
+                    <!-- SHORT BIO (6–7 WORDS ONLY) -->
+                    <p class="omg-short-bio">
+                        Trusted dermatologist with 21+ years experience.
+                    </p>
+
+                    <!-- CTA -->
+                    <a href="team.html#dr-harji-kaur" class="omg-view-more">
+                        View Full Profile →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <br><br> <br><br>
+    </section>
+
+
+
+    <!--==============================
     Banner Area
     ==============================-->
-        <!-- <section class=" pt-xl-5 space-extra-bottom">
+    <!-- <section class=" pt-xl-5 space-extra-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -1194,104 +1008,10 @@
             </div>
         </div>
     </section> -->
-        <!--==============================
-    Gallery Area
-    ==============================-->
-        <section class=" space-bottom">
-            <div class="shape-mockup jump d-none d-xxl-block" data-left="1%" data-top="-5%"><img
-                    src="assets/img/shape/flower-1-2.png" alt="flower"></div>
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp wow-animated" data-wow-delay="0.2s">
-                        <div class="title-area">
-                            <h2 class="sec-title4">Inside Oh My Glow Clinic</h2>
-                            <p class="sec-text">A glimpse into our calm, hygienic, and thoughtfully designed spaces
-                                where
-                                advanced care meets comfort.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row filter-active gx-4 gy-4 wow fadeInUp" data-wow-delay="0.3s">
-
-                    <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
-                        <div class="gallery-style3 image-scale-hover">
-                            <a href="/womens/assets/img/gallery/gal-5-1.jpg" class="icon-btn popup-image">
-                                <i class="far fa-eye"></i>
-                            </a>
-                            <img src="/womens/assets/img/gallery/gal-5-1.jpg" alt="Gallery Image" class="w-100">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
-                        <div class="gallery-style3 image-scale-hover">
-                            <a href="/womens/assets/img/gallery/gal-5-2.jpg" class="icon-btn popup-image">
-                                <i class="far fa-eye"></i>
-                            </a>
-                            <img src="/womens/assets/img/gallery/gal-5-2.jpg" alt="Gallery Image" class="w-100">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
-                        <div class="gallery-style3 image-scale-hover">
-                            <a href="/womens/assets/img/gallery/gal-5-3.jpg" class="icon-btn popup-image">
-                                <i class="far fa-eye"></i>
-                            </a>
-                            <img src="/womens/assets/img/gallery/gal-5-3.jpg" alt="Gallery Image" class="w-100">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
-                        <div class="gallery-style3 image-scale-hover">
-                            <a href="/womens/assets/img/gallery/gal-5-4.jpg" class="icon-btn popup-image">
-                                <i class="far fa-eye"></i>
-                            </a>
-                            <img src="/womens/assets/img/gallery/gal-5-4.jpg" alt="Gallery Image" class="w-100">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
-                        <div class="gallery-style3 image-scale-hover">
-                            <a href="/womens/assets/img/gallery/gal-5-5.jpg" class="icon-btn popup-image">
-                                <i class="far fa-eye"></i>
-                            </a>
-                            <img src="/womens/assets/img/gallery/gal-5-5.jpg" alt="Gallery Image" class="w-100">
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-4 col-xl-4 filter-item">
-                        <div class="gallery-style3 image-scale-hover">
-                            <a href="/womens/assets/img/gallery/gal-5-6.jpg" class="icon-btn popup-image">
-                                <i class="far fa-eye"></i>
-                            </a>
-                            <img src="/womens/assets/img/gallery/gal-5-6.jpg" alt="Gallery Image" class="w-100">
-                        </div>
-                    </div>
-
-
-                </div>
-                <!-- <div style="text-align:center; margin-top:50px;">
-                    <a href="contact.html" style="
-            display:inline-block;
-            padding:14px 38px;
-            background:#8e1b7a;
-            color:#ffffff;
-            text-decoration:none;
-            font-weight:600;
-            letter-spacing:1px;
-            text-transform:uppercase;
-            border-radius:0;
-            transition:all 0.3s ease;
-       " onmouseover="this.style.background='#000000';" onmouseout="this.style.background='#8e1b7a';">
-                        View More
-                    </a>
-                </div> -->
-
-        </section><!--==============================
+    <!--==============================
     Testimonial Area
     ==============================-->
-        <!-- <section class=" space-top space-extra-bottom">
+    <!-- <section class=" space-top space-extra-bottom">
         <div class="parallax" data-parallax-image="assets/img/bg/testi-bg-3-2.jpg"></div>
         <div class="container">
             <div class="row justify-content-center text-center">
@@ -1374,15 +1094,11 @@
             </div>
         </div>
     </section> -->
-        <br><br>
-        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-39d4966e-fb90-4b6c-b2b9-b655635a2248" data-elfsight-app-lazy></div>
-        <br><br>
-        <!--==============================
+
+    <!--==============================
     Team Area
     ==============================-->
-        <!-- <section class=" space-top space-extra-bottom">
+    <!-- <section class=" space-top space-extra-bottom">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp wow-animated" data-wow-delay="0.2s">
@@ -1480,10 +1196,10 @@
             </div>
         </section> -->
 
-        <!--==============================
+    <!--==============================
     Blog Area
     ==============================-->
-        <!-- <section class=" space-top space-extra-bottom">
+    <!-- <section class=" space-top space-extra-bottom">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp wow-animated" data-wow-delay="0.2s">
@@ -1578,305 +1294,304 @@
             </div>
         </div>
     </section> -->
-        <!-- OMG CLINIC POPUP -->
-        <div class="omgcp-overlay" id="omgcpOverlay">
-            <div class="omgcp-modal">
+    <!-- OMG CLINIC POPUP -->
+    <div class="omgcp-overlay" id="omgcpOverlay">
+        <div class="omgcp-modal">
 
-                <!-- IMAGE -->
-                <div class="omgcp-media">
-                    <img src="/womens/assets/img/popup/popup-img-1.jpg" alt="Clinic Consultation">
-                </div>
+            <!-- IMAGE -->
+            <div class="omgcp-media">
+                <img src="/womens/assets/img/popup/popup-img-1.jpg" alt="Clinic Consultation">
+            </div>
 
-                <!-- CONTENT -->
-                <div class="omgcp-body">
-                    <button class="omgcp-close" aria-label="Close popup">×</button>
+            <!-- CONTENT -->
+            <div class="omgcp-body">
+                <button class="omgcp-close" aria-label="Close popup">×</button>
 
-                    <h3 class="omgcp-title">Book Free Consultation</h3>
-                    <p class="omgcp-subtitle">
-                        Doctor-led skin, hair & laser solutions.
-                    </p>
+                <h3 class="omgcp-title">Book Free Consultation</h3>
+                <p class="omgcp-subtitle">
+                    Doctor-led skin, hair & laser solutions.
+                </p>
 
 
-                    <form class="omgcp-form" id="omgcpForm">
+                <form class="omgcp-form" id="omgcpForm">
 
-                        <input type="text" name="full_name" placeholder="Full Name" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
 
-                        <!-- GENDER SELECT -->
-                        <div class="omgcp-gender-row">
+                    <!-- GENDER SELECT -->
+                    <div class="omgcp-gender-row">
 
-                            <input type="radio" name="gender" id="gender-men" value="Men" checked hidden>
-                            <label for="gender-men" class="gender-card">
-                                <i class="fas fa-mars"></i>
-                                <span>Men</span>
-                            </label>
+                        <input type="radio" name="gender" id="gender-men" value="Men" checked hidden>
+                        <label for="gender-men" class="gender-card">
+                            <i class="fas fa-mars"></i>
+                            <span>Men</span>
+                        </label>
 
-                            <input type="radio" name="gender" id="gender-women" value="Women" hidden>
-                            <label for="gender-women" class="gender-card">
-                                <i class="fas fa-venus"></i>
-                                <span>Women</span>
-                            </label>
+                        <input type="radio" name="gender" id="gender-women" value="Women" hidden>
+                        <label for="gender-women" class="gender-card">
+                            <i class="fas fa-venus"></i>
+                            <span>Women</span>
+                        </label>
 
-                        </div>
+                    </div>
 
-                        <select name="service" required>
-                            <option value="">Select Service</option>
-                            <option>Skin Treatment</option>
-                            <option>Hair Treatment</option>
-                            <option>Laser Hair Reduction</option>
-                            <option>Body Contouring</option>
-                        </select>
+                    <select name="service" id="omgcpService" required>
+                        <option value="">Select Service *</option>
 
-                        <button type="submit" class="omgcp-submit">
-                            Book Appointment
-                        </button>
+                        <!-- CONTACT (VISIBLE FOR BOTH) -->
+                        <option value="General Contact / Inquiry" data-gender="both">
+                            General Contact / Inquiry
+                        </option>
 
-                    </form>
+                        <!-- ================= MEN SERVICES ================= -->
 
-                </div>
+                        <!-- Skin -->
+                        <option value="Men – OMG 7 Signature Medifacials" data-gender="men">Men – OMG 7 Signature
+                            Medifacials</option>
+                        <option value="Men – Acne & Acne Scar Treatment" data-gender="men">Men – Acne & Acne Scar
+                            Treatment</option>
+                        <option value="Men – Pigmentation Treatment" data-gender="men">Men – Pigmentation Treatment
+                        </option>
+                        <option value="Men – Anti-Ageing Treatment" data-gender="men">Men – Anti-Ageing Treatment
+                        </option>
+                        <option value="Men – Injectables (Botox / Fillers / Threads)" data-gender="men">Men –
+                            Injectables (Botox / Fillers / Threads)</option>
+                        <option value="Men – Chemical Peels" data-gender="men">Men – Chemical Peels</option>
+
+                        <!-- Body -->
+                        <option value="Men – Weight Loss Program" data-gender="men">Men – Weight Loss Program
+                        </option>
+                        <option value="Men – Inch Loss Program" data-gender="men">Men – Inch Loss Program</option>
+                        <option value="Men – Body Contouring" data-gender="men">Men – Body Contouring</option>
+                        <option value="Men – Spot Fat Reduction" data-gender="men">Men – Spot Fat Reduction</option>
+
+                        <!-- Hair -->
+                        <option value="Men – Hair Fall Treatment" data-gender="men">Men – Hair Fall Treatment
+                        </option>
+                        <option value="Men – Hair Thinning Treatment" data-gender="men">Men – Hair Thinning
+                            Treatment</option>
+                        <option value="Men – Hair Revital Boost" data-gender="men">Men – Hair Revital Boost</option>
+                        <option value="Men – GFC / PRP Hair Treatment" data-gender="men">Men – GFC / PRP Hair
+                            Treatment</option>
+
+                        <!-- PMU -->
+                        <option value="Men – PMU Beard Shaping" data-gender="men">Men – PMU Beard Shaping</option>
+                        <option value="Men – PMU Lip Tint" data-gender="men">Men – PMU Lip Tint</option>
+                        <option value="Men – Scalp Micropigmentation" data-gender="men">Men – Scalp
+                            Micropigmentation</option>
+
+                        <!-- Laser Hair Reduction (LHR) -->
+                        <option value="Men – Beard Shaping Laser" data-gender="men">Men – Beard Shaping Laser
+                        </option>
+                        <option value="Men – Chest Laser Hair Reduction" data-gender="men">Men – Chest Laser Hair
+                            Reduction</option>
+                        <option value="Men – Back & Shoulder Laser Hair Reduction" data-gender="men">Men – Back &
+                            Shoulder Laser Hair Reduction</option>
+                        <option value="Men – Full Body Laser Hair Reduction" data-gender="men">Men – Full Body Laser
+                            Hair Reduction</option>
+
+                        <!-- Others -->
+                        <option value="Men – IV Drips Therapy" data-gender="men">Men – IV Drips Therapy</option>
+                        <option value="Men – Body Brightening" data-gender="men">Men – Body Brightening</option>
+                        <option value="Men – Pre-Wedding Groom Packages" data-gender="men">Men – Pre-Wedding Groom
+                            Packages</option>
+
+                        <!-- WOMEN SERVICES -->
+                        <option value="Women – PRP / GFC Hair Regrowth" data-gender="women">Women – PRP / GFC Hair
+                            Regrowth</option>
+                        <option value="Women – Acne & Acne Scar Treatment" data-gender="women">Women – Acne & Acne
+                            Scar Treatment</option>
+                        <option value="Women – Pigmentation & Tanning Correction" data-gender="women">Women –
+                            Pigmentation & Tanning Correction</option>
+                        <option value="Women – Full Body Laser Hair Reduction" data-gender="women">Women – Full Body
+                            Laser Hair Reduction</option>
+                        <option value="Women – Body Contouring" data-gender="women">Women – Body Contouring</option>
+                        <option value="Women – Weight Management Programs" data-gender="women">Women – Weight
+                            Management Programs</option>
+                    </select>
+
+
+                    <button type="submit" class="omgcp-submit">
+                        Book Appointment
+                    </button>
+
+                </form>
 
             </div>
-        </div>
-        <div data-include="footer.html"></div>
-        <!-- Scroll To Top -->
-        <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
 
-        <!--********************************
+        </div>
+    </div>
+    <div data-include="footer.html"></div>
+    <!-- Scroll To Top -->
+    <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
+
+    <!--********************************
 			Code End  Here 
 	******************************** -->
 
-        <!--==============================
+    <!--==============================
         All Js File
     ============================== -->
-        <!-- Jquery -->
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <!-- jQuery UI -->
-        <script src="assets/js/jquery-ui.min.js"></script>
-        <!-- Slick Slider -->
-        <script src="assets/js/slick.min.js"></script>
-        <!-- <script src="assets/js/app.min.js"></script> -->
-        <!-- Layerslider -->
-        <script src="assets/js/layerslider.utils.js"></script>
-        <script src="assets/js/layerslider.transitions.js"></script>
-        <script src="assets/js/layerslider.kreaturamedia.jquery.js"></script>
-        <!-- Bootstrap -->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <!-- Parallax Scroll -->
-        <script src="assets/js/universal-parallax.min.js"></script>
-        <!-- Wow.js Animation -->
-        <script src="assets/js/wow.min.js"></script>
-        <!-- jQuery Datepicker -->
-        <script src="assets/js/jquery.datetimepicker.min.js"></script>
-        <!-- Magnific Popup -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <!-- Isotope Filter -->
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <!-- Main Js File -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <!-- Layerslider -->
+    <script src="assets/js/layerslider.utils.js"></script>
+    <script src="assets/js/layerslider.transitions.js"></script>
+    <script src="assets/js/layerslider.kreaturamedia.jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Parallax Scroll -->
+    <script src="assets/js/universal-parallax.min.js"></script>
+    <!-- Wow.js Animation -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- jQuery Datepicker -->
+    <script src="assets/js/jquery.datetimepicker.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Main Js File -->
+    <script src="dynamic.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/service-tab.js"></script>
+    <script>
+        const slides = document.querySelectorAll('.hero-slide');
+        const hero = document.querySelector('.mobile-hero');
 
-        <script src="dynamic.js"></script>
+        let current = 0;
+        let startX = 0;
+        let autoSlide;
+        const duration = 800; // must match CSS fade time
 
-        <script src="assets/js/main.js"></script>
-        <script>
-            const slides = document.querySelectorAll('.hero-slide');
-            const hero = document.querySelector('.mobile-hero');
+        // Init
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === 0 ? '1' : '0';
+            slide.classList.toggle('active', i === 0);
+        });
 
-            let current = 0;
-            let startX = 0;
-            let autoSlide;
-            const duration = 800; // must match CSS fade time
+        function showSlide(next) {
+            if (next === current) return;
 
-            // Init
-            slides.forEach((slide, i) => {
-                slide.style.opacity = i === 0 ? '1' : '0';
-                slide.classList.toggle('active', i === 0);
-            });
+            const currentSlide = slides[current];
+            const nextSlide = slides[next];
 
-            function showSlide(next) {
-                if (next === current) return;
+            // Prepare next slide
+            nextSlide.classList.add('active');
+            nextSlide.style.opacity = '1';
 
-                const currentSlide = slides[current];
-                const nextSlide = slides[next];
+            // Fade out current
+            currentSlide.style.opacity = '0';
 
-                // Prepare next slide
-                nextSlide.classList.add('active');
-                nextSlide.style.opacity = '1';
+            setTimeout(() => {
+                currentSlide.classList.remove('active');
+                current = next;
+            }, duration);
+        }
 
-                // Fade out current
-                currentSlide.style.opacity = '0';
+        function nextSlide() {
+            const next = current + 1 < slides.length ? current + 1 : 0;
+            showSlide(next);
+        }
 
-                setTimeout(() => {
-                    currentSlide.classList.remove('active');
-                    current = next;
-                }, duration);
+        function prevSlide() {
+            const prev = current - 1 >= 0 ? current - 1 : slides.length - 1;
+            showSlide(prev);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 4000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        // Start loop
+        startAutoSlide();
+
+        // Swipe support
+        hero.addEventListener('touchstart', (e) => {
+            stopAutoSlide();
+            startX = e.touches[0].clientX;
+        });
+
+        hero.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextSlide() : prevSlide();
             }
 
-            function nextSlide() {
-                const next = current + 1 < slides.length ? current + 1 : 0;
-                showSlide(next);
-            }
-
-            function prevSlide() {
-                const prev = current - 1 >= 0 ? current - 1 : slides.length - 1;
-                showSlide(prev);
-            }
-
-            function startAutoSlide() {
-                autoSlide = setInterval(nextSlide, 4000);
-            }
-
-            function stopAutoSlide() {
-                clearInterval(autoSlide);
-            }
-
-            // Start loop
             startAutoSlide();
+        });
+    </script>
+    <!-- Video Play Button Script -->
+    <script>
+        document.querySelectorAll('.omg-hifu-play-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const shell = btn.closest('.omg-hifu-video-shell');
+                const video = shell.querySelector('video');
 
-            // Swipe support
-            hero.addEventListener('touchstart', (e) => {
-                stopAutoSlide();
-                startX = e.touches[0].clientX;
-            });
+                // Stop all other videos
+                document.querySelectorAll('.omg-hifu-video').forEach(v => {
+                    if (v !== video) {
+                        v.pause();
+                        v.currentTime = 0;
+                        v.classList.remove('is-playing');
 
-            hero.addEventListener('touchend', (e) => {
-                const endX = e.changedTouches[0].clientX;
-                const diff = startX - endX;
-
-                if (Math.abs(diff) > 50) {
-                    diff > 0 ? nextSlide() : prevSlide();
-                }
-
-                startAutoSlide();
-            });
-        </script>
-        <script>
-            (function () {
-
-                /* =========================
-                   CONFIG
-                ========================= */
-                const POPUP_KEY = "omgcp_popup_views";
-                const MAX_VIEWS = 4;
-                const SHEET_URL = "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec";
-
-                /* =========================
-                   ELEMENTS
-                ========================= */
-                const overlay = document.getElementById("omgcpOverlay");
-                const closeBtn = overlay?.querySelector(".omgcp-close");
-                const form = document.getElementById("omgcpForm");
-
-                if (!overlay || !form) return;
-
-                /* =========================
-                   SCROLL CONTROL
-                ========================= */
-                function lockScroll() {
-                    document.body.style.overflow = "hidden";
-                    document.documentElement.style.overflow = "hidden";
-                }
-
-                function unlockScroll() {
-                    document.body.style.overflow = "";
-                    document.documentElement.style.overflow = "";
-                }
-
-                /* =========================
-                   POPUP CONTROL
-                ========================= */
-                function openPopup() {
-                    overlay.style.display = "flex";
-                    lockScroll();
-                }
-
-                function closePopup() {
-                    overlay.style.display = "none";
-                    unlockScroll();
-                }
-
-                // ✅ Manual trigger only
-                window.openClinicPopup = openPopup;
-
-                /* =========================
-                   CLOSE ACTIONS
-                ========================= */
-                closeBtn?.addEventListener("click", closePopup);
-
-                overlay.addEventListener("click", (e) => {
-                    if (e.target === overlay) closePopup();
+                        const otherBtn = v
+                            .closest('.omg-hifu-video-shell')
+                            .querySelector('.omg-hifu-play-btn');
+                        otherBtn.style.display = 'flex';
+                    }
                 });
 
-                /* =========================
-                   FORM SUBMIT (GOOGLE SHEET)
-                ========================= */
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-
-                    const btn = form.querySelector(".omgcp-submit");
-                    if (btn.disabled) return;
-
-                    btn.innerText = "Submitting...";
-                    btn.disabled = true;
-
-                    const formData = new FormData(form);
-
-                    fetch(SHEET_URL, {
-                        method: "POST",
-                        body: formData
-                    })
-                        .then(res => res.text())
-                        .then(res => {
-                            if (res === "success") {
-                                btn.innerText = "Submitted ✓";
-                                form.reset();
-
-                                setTimeout(() => {
-                                    btn.innerText = "Book Appointment";
-                                    btn.disabled = false;
-                                    closePopup();
-                                }, 1800);
-                            } else {
-                                throw new Error("Submission failed");
-                            }
-                        })
-                        .catch(err => {
-                            console.error("Google Sheet Error:", err);
-                            alert("Something went wrong. Please try again.");
-                            btn.innerText = "Book Appointment";
-                            btn.disabled = false;
-                        });
-                });
-
-            })();
-        </script>
-        <script>
-            document.querySelectorAll('.omg-hifu-play-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const shell = btn.closest('.omg-hifu-video-shell');
-                    const video = shell.querySelector('video');
-
-                    // Stop all other videos
-                    document.querySelectorAll('.omg-hifu-video').forEach(v => {
-                        if (v !== video) {
-                            v.pause();
-                            v.currentTime = 0;
-                            v.classList.remove('is-playing');
-
-                            const otherBtn = v
-                                .closest('.omg-hifu-video-shell')
-                                .querySelector('.omg-hifu-play-btn');
-                            otherBtn.style.display = 'flex';
-                        }
-                    });
-
-                    // Play selected
-                    video.classList.add('is-playing');
-                    video.play();
-                    btn.style.display = 'none';
-                });
+                // Play selected
+                video.classList.add('is-playing');
+                video.play();
+                btn.style.display = 'none';
             });
-        </script>
+        });
+    </script>
+    <!-- Results Slider Script -->
+    <script>
+        const row = document.getElementById("resultsRow");
 
+        function slideResults(dir) {
+            row.scrollLeft += dir * 360;
+        }
+
+        /* Before–After Drag */
+        document.querySelectorAll('.ba-container').forEach(c => {
+            let active = false;
+            const after = c.querySelector('.ba-after');
+            const handle = c.querySelector('.ba-handle');
+
+            function move(x) {
+                const r = c.getBoundingClientRect();
+                let p = ((x - r.left) / r.width) * 100;
+                p = Math.max(0, Math.min(100, p));
+                after.style.clipPath = `inset(0 0 0 ${p}%)`;
+                handle.style.left = p + "%";
+            }
+
+            c.addEventListener('mousedown', e => { active = true; move(e.clientX) });
+            window.addEventListener('mousemove', e => active && move(e.clientX));
+            window.addEventListener('mouseup', () => active = false);
+
+            c.addEventListener('touchstart', e => { active = true; move(e.touches[0].clientX) });
+            c.addEventListener('touchmove', e => active && move(e.touches[0].clientX));
+            c.addEventListener('touchend', () => active = false);
+        });
+    </script>
 
 
 </body>
