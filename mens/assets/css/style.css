@@ -11016,6 +11016,7 @@ blockquote.vs-quote cite:before {
 .gallery-style3 {
   position: relative;
   border-bottom: 4px solid var(--theme-color);
+  margin-bottom: 25px;
 }
 
 .gallery-style3 .gallery-img img {
@@ -14805,6 +14806,7 @@ blockquote.vs-quote cite:before {
 .exclusive-experiences-section {
   position: relative;
   font-family: var(--body-font);
+  margin-bottom: -100px;
 }
 
 /* Row spacing */
@@ -14873,6 +14875,7 @@ blockquote.vs-quote cite:before {
 
   .experience-card {
     margin-top: 30px;
+    padding: 30px 20px;
   }
 }
 
@@ -14927,7 +14930,7 @@ blockquote.vs-quote cite:before {
 /* Mobile spacing */
 @media (max-width: 767px) {
   .trust-strip-full {
-    padding: 60px 0;
+    padding: 35px 0;
   }
 
   .trust-item {
@@ -15392,6 +15395,7 @@ input[type="radio"]:checked+.gender-card i {
   background: linear-gradient(180deg,
       rgba(249, 225, 234, 0.35),
       rgba(255, 255, 255, 0));
+  margin-top: -120px;
 }
 
 .machine-image-frame {
@@ -16253,7 +16257,7 @@ input[type="radio"]:checked+.gender-card i {
   background: #fff;
   appearance: none;
   cursor: pointer;
-
+  margin-top: -54px;
   /* dropdown arrow */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%238c1977' d='M5 7l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -16287,8 +16291,9 @@ input[type="radio"]:checked+.gender-card i {
 /* SECTION */
 .omg-results-section {
   margin: auto;
-  padding: 80px 24px;
-  background-color: #faf8f5
+  padding: 80px 4px;
+  background-color: #faf8f5;
+  margin-top: -100px;
 }
 
 /* TITLE */
