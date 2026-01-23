@@ -16280,6 +16280,10 @@ input[type="radio"]:checked+.gender-card i {
   }
 }
 
+/* ==============================
+   BEFORE AFTER RESULTS SECTION UI
+================================ */
+
 :root {
   --primary: #8c1977;
   --card: #ffffff;
@@ -16293,7 +16297,6 @@ input[type="radio"]:checked+.gender-card i {
   margin: auto;
   padding: 80px 4px;
   background-color: #faf8f5;
-  margin-top: -100px;
 }
 
 /* TITLE */
