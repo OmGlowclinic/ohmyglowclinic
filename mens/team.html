@@ -266,13 +266,94 @@
 
                     </div>
 
-                    <select name="service" required>
-                        <option value="">Select Service</option>
-                        <option>Skin Treatment</option>
-                        <option>Hair Treatment</option>
-                        <option>Laser Hair Reduction</option>
-                        <option>Body Contouring</option>
+                    <select name="service" id="omgcpService" required>
+                        <option value="">Select Service *</option>
+
+                        <!-- CONTACT (VISIBLE FOR BOTH) -->
+                        <option value="General Contact / Inquiry" data-gender="both">
+                            General Contact / Inquiry
+                        </option>
+
+                        <!-- ================= MEN SERVICES ================= -->
+
+                        <!-- MEN – SKIN -->
+                        <option value="Men – OMG 7 Signature MediFacials" data-service="men-omg-7-medifacials"
+                            data-gender="men">Men – OMG 7 Signature MediFacials</option>
+                        <option value="Men – Acne & Acne Scar Treatment" data-service="men-acne-scar-treatment"
+                            data-gender="men">Men – Acne & Acne Scar Treatment</option>
+                        <option value="Men – Pigmentation Treatment" data-service="men-pigmentation-treatment"
+                            data-gender="men">Men – Pigmentation Treatment</option>
+                        <option value="Men – Anti-Ageing Treatment" data-service="men-anti-ageing-treatment"
+                            data-gender="men">Men – Anti-Ageing Treatment</option>
+                        <option value="Men – Injectables (Botox / Fillers / Threads)" data-service="men-injectables"
+                            data-gender="men">Men – Injectables (Botox / Fillers / Threads)</option>
+                        <option value="Men – Chemical Peels" data-service="men-chemical-peels" data-gender="men">Men –
+                            Chemical Peels</option>
+
+                        <!-- MEN – BODY -->
+                        <option value="Men – Weight Loss Program" data-service="men-weight-loss" data-gender="men">Men –
+                            Weight Loss Program</option>
+                        <option value="Men – Inch Loss Program" data-service="men-inch-loss" data-gender="men">Men –
+                            Inch Loss Program</option>
+                        <option value="Men – Body Contouring" data-service="men-body-contouring" data-gender="men">Men –
+                            Body Contouring</option>
+                        <option value="Men – Spot Fat Reduction" data-service="men-spot-fat-reduction"
+                            data-gender="men">Men – Spot Fat Reduction</option>
+
+                        <!-- MEN – HAIR -->
+                        <option value="Men – Hair Fall Treatment" data-service="men-hair-fall-treatment"
+                            data-gender="men">Men – Hair Fall Treatment</option>
+                        <option value="Men – Hair Thinning Treatment" data-service="men-hair-thinning-treatment"
+                            data-gender="men">Men – Hair Thinning Treatment</option>
+                        <option value="Men – Hair Revital Boost" data-service="men-hair-revital-boost"
+                            data-gender="men">Men – Hair Revital Boost</option>
+                        <option value="Men – GFC / PRP Hair Treatment" data-service="men-gfc-prp-hair"
+                            data-gender="men">Men – GFC / PRP Hair Treatment</option>
+
+                        <!-- MEN – PMU -->
+                        <option value="Men – PMU Beard Shaping" data-service="men-pmu-beard-shaping" data-gender="men">
+                            Men – PMU Beard Shaping</option>
+                        <option value="Men – PMU Lip Tint" data-service="men-pmu-lip-tint" data-gender="men">Men – PMU
+                            Lip Tint</option>
+                        <option value="Men – Scalp Micropigmentation" data-service="men-scalp-micropigmentation"
+                            data-gender="men">Men – Scalp Micropigmentation</option>
+
+                        <!-- MEN – LASER -->
+                        <option value="Men – Beard Shaping Laser" data-service="men-beard-laser" data-gender="men">Men –
+                            Beard Shaping Laser</option>
+                        <option value="Men – Chest Laser Hair Reduction" data-service="men-chest-laser"
+                            data-gender="men">Men – Chest Laser Hair Reduction</option>
+                        <option value="Men – Back & Shoulder Laser Hair Reduction"
+                            data-service="men-back-shoulder-laser" data-gender="men">Men – Back & Shoulder Laser Hair
+                            Reduction</option>
+                        <option value="Men – Full Body Laser Hair Reduction" data-service="men-full-body-laser"
+                            data-gender="men">Men – Full Body Laser Hair Reduction</option>
+
+                        <!-- MEN – OTHERS -->
+                        <option value="Men – IV Drips Therapy" data-service="men-iv-drips" data-gender="men">Men – IV
+                            Drips Therapy</option>
+                        <option value="Men – Body Brightening" data-service="men-body-brightening" data-gender="men">Men
+                            – Body Brightening</option>
+                        <option value="Men – Pre-Wedding Groom Packages" data-service="men-prewedding-groom"
+                            data-gender="men">Men – Pre-Wedding Groom Packages</option>
+
+                        <!-- WOMEN -->
+                        <option value="Women – PRP / GFC Hair Regrowth" data-service="women-prp-gfc-hair"
+                            data-gender="women">Women – PRP / GFC Hair Regrowth</option>
+                        <option value="Women – Acne & Acne Scar Treatment" data-service="women-acne-scar-treatment"
+                            data-gender="women">Women – Acne & Acne Scar Treatment</option>
+                        <option value="Women – Pigmentation & Tanning Correction"
+                            data-service="women-pigmentation-tanning" data-gender="women">Women – Pigmentation & Tanning
+                            Correction</option>
+                        <option value="Women – Full Body Laser Hair Reduction" data-service="women-full-body-laser"
+                            data-gender="women">Women – Full Body Laser Hair Reduction</option>
+                        <option value="Women – Body Contouring" data-service="women-body-contouring"
+                            data-gender="women">Women – Body Contouring</option>
+                        <option value="Women – Weight Management Programs" data-service="women-weight-management"
+                            data-gender="women">Women – Weight Management Programs</option>
+
                     </select>
+
 
                     <button type="submit" class="omgcp-submit">
                         Book Appointment
@@ -319,6 +400,8 @@
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
     <script src="dynamic.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/service-tab.js"></script>
     <script>
         const slides = document.querySelectorAll('.hero-slide');
         const hero = document.querySelector('.mobile-hero');
