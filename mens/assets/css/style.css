@@ -15727,195 +15727,285 @@ input[type="radio"]:checked+.gender-card i {
 }
 
 /* ===========================
-   SINGLE DOCTOR SECTION
+   TEAM SECTION – UNIFIED CARDS
 =========================== */
 
 .omg-team-section {
   padding: 90px 0;
-  background: #fff
-}
-
-.omg-team-head {
-  max-width: 720px;
-  margin-bottom: 60px;
-}
-
-.omg-eyebrow {
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: #8c1977;
-  font-weight: 600;
-}
-
-.omg-team-head h2 {
-  font-size: 38px;
-  margin: 12px 0;
-}
-
-.omg-team-head p {
-  color: #666;
-  font-size: 16px;
-}
-
-/* Doctor Card */
-.omg-doctor-card.single {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 50px;
   background: #fff;
-  border-radius: 22px;
-  padding: 40px;
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.06),
-    0 20px 40px rgba(140, 25, 119, 0.08);
 }
 
-/* Image */
-.omg-doctor-img img {
+.omg-team-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.omg-team-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.06),
+    0 25px 45px rgba(140, 25, 119, 0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.omg-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.08),
+    0 35px 65px rgba(140, 25, 119, 0.12);
+}
+
+/* IMAGE */
+.omg-team-img img {
   width: 100%;
-  border-radius: 16px;
+  height: 280px;
   object-fit: cover;
 }
 
-/* Info */
-.omg-doctor-info h3 {
-  font-size: 26px;
+/* CONTENT */
+.omg-team-info {
+  padding: 26px 24px 30px;
+  text-align: left;
+}
+
+.omg-team-info h3 {
+  font-size: 22px;
   margin-bottom: 6px;
 }
 
 .omg-role {
+  display: block;
+  font-size: 14px;
   color: #8c1977;
   font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.omg-team-info p {
   font-size: 15px;
-}
-
-.omg-meta {
-  list-style: none;
-  padding: 0;
-  margin: 22px 0;
-}
-
-.omg-meta li {
-  font-size: 14.5px;
-  color: #444;
-  margin-bottom: 8px;
-}
-
-.omg-desc {
-  font-size: 15.5px;
-  line-height: 1.75;
+  line-height: 1.7;
   color: #555;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .omg-doctor-card.single {
-    grid-template-columns: 1fr;
-    padding: 30px;
-    margin-bottom: 25px;
-  }
-}
-
-.omg-short-bio {
-  font-size: 15px;
-  color: #555;
-  margin: 12px 0 18px;
-}
-
-.omg-view-more {
-  display: inline-block;
+.omg-team-info a {
   font-size: 14px;
   font-weight: 600;
   color: #8c1977;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
 }
 
-.omg-view-more:hover {
+.omg-team-info a:hover {
   border-color: #8c1977;
-}
-
-.omg-team-page {
-  padding: 80px 0;
-  background: #fafafa;
-}
-
-.omg-team-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.omg-team-header h1 {
-  font-size: 38px;
-  font-weight: 600;
-}
-
-.omg-team-header p {
-  color: #666;
-  font-size: 16px;
-}
-
-/* CARD */
-.omg-team-card {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 50px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-}
-
-/* IMAGE */
-.omg-team-image img {
-  width: 100%;
-  border-radius: 16px;
-  object-fit: cover;
-}
-
-/* CONTENT */
-.omg-team-content h2 {
-  font-size: 30px;
-  margin-bottom: 6px;
-}
-
-.omg-team-role {
-  color: #8c1977;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 20px;
-}
-
-/* HIGHLIGHTS */
-.omg-team-highlights {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.omg-team-highlights li {
-  font-size: 15px;
-  margin-bottom: 6px;
-  color: #444;
-}
-
-/* BIO */
-.omg-team-bio p {
-  font-size: 15.5px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 14px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-  .omg-team-card {
-    grid-template-columns: 1fr;
-    padding: 25px;
+  .omg-team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 576px) {
+  .omg-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.omg-team-section {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.omg-team-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.omg-team-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, .06),
+    0 25px 45px rgba(140, 25, 119, .08);
+}
+
+/* IMAGE – FULL & NATURAL */
+.omg-team-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CONTENT */
+.omg-team-info {
+  padding: 26px 24px 28px;
+}
+
+.omg-team-info h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.omg-role {
+  display: block;
+  font-size: 14px;
+  color: #8c1977;
+  margin-bottom: 12px;
+}
+
+/* TEXT CLAMP */
+.omg-team-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Expanded */
+.omg-team-card.active .omg-team-text {
+  -webkit-line-clamp: unset;
+}
+
+/* SHOW MORE */
+.omg-show-more {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8c1977;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px) {
+  .omg-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:576px) {
+  .omg-team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== SHOW MORE BUTTON ===== */
+.omg-show-more {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8c1977;
+  cursor: pointer;
+}
+
+/* ===== MODAL WRAPPER ===== */
+.omg-profile-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.omg-profile-modal.active {
+  display: block;
+}
+
+/* BACKDROP */
+.omg-profile-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+}
+
+/* MODAL / DRAWER */
+.omg-profile-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 92%;
+  max-width: 520px;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .2);
+}
+
+/* MOBILE → BOTTOM SHEET */
+@media(max-width:576px) {
+  .omg-profile-box {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    border-radius: 20px 20px 0 0;
+    animation: slideUp .3s ease;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* CONTENT */
+.omg-profile-box h3 {
+  margin-bottom: 4px;
+}
+
+.omg-profile-box span {
+  display: block;
+  font-size: 14px;
+  color: #8c1977;
+  margin-bottom: 14px;
+}
+
+.omg-profile-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* CLOSE */
+.omg-profile-close {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 
 /* ==============================
    MENS SERVICES SECTION UI
@@ -16510,5 +16600,33 @@ input[type="radio"]:checked+.gender-card i {
 @media (max-width: 767px) {
   .hide-on-mobile {
     display: none !important;
+  }
+}
+
+.omg-result-images {
+  display: flex;
+  gap: 18px;
+}
+
+/* DESKTOP / TABLET */
+.omg-result-images a {
+  flex: 1;
+  display: block;
+}
+
+.omg-result-images img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* MOBILE – STACK ONE BY ONE */
+@media (max-width: 576px) {
+  .omg-result-images {
+    flex-direction: column;
+  }
+
+  .omg-result-images a {
+    flex: unset;
   }
 }

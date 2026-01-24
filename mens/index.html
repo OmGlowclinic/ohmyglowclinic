@@ -409,7 +409,7 @@
     <!--==============================
     Service Area
     ==============================-->
-    <div class="omg-ms-wrapper">
+    <div class="omg-ms-wrapper" id="services">
         <section class="space-top space-extra-bottom omg-ms-section">
             <div class="container">
                 <div class="row justify-content-center text-center">
@@ -468,7 +468,7 @@
     <!--==============================
     About Area
     ==============================-->
-    <section class="space">
+    <section class="space" id="about">
         <div class="container">
             <div class="row gx-50 flex-row-reverse">
 
@@ -608,7 +608,7 @@
     <!-- =========================
 RESULTS THAT SPEAK – SECTION
 ========================= -->
-    <section class="omg-results-section">
+    <section class="omg-results-section" id="results">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -632,118 +632,16 @@ RESULTS THAT SPEAK – SECTION
                 </div>
             </div>
 
-            <div class="omg-results-wrap">
-                <!-- Desktop Arrows -->
-                <button class="omg-arrow left" onclick="slideResults(-1)">‹</button>
-                <button class="omg-arrow right" onclick="slideResults(1)">›</button>
+            <div class="omg-result-images">
+                <a href="javascript:void(0);" onclick="openClinicPopup()">
+                    <img src="assets/img/results/glow-treatment.jpg" alt="Result Image 1">
+                </a>
 
-                <!-- Cards Row -->
-                <div class="omg-results-row" id="resultsRow">
-
-                    <!-- 1. LASER HAIR REDUCTION -->
-                    <div class="omg-result-card">
-                        <div class="omg-result-title">Laser Hair Reduction</div>
-                        <div class="omg-result-sub">
-                            Visible hair reduction, smoother skin, zero razor dependency.
-                        </div>
-
-                        <div class="ba-container">
-                            <img src="assets/img/results/hr-1.png">
-                            <img src="assets/img/results/hr-2.png" class="ba-after">
-                            <div class="ba-handle"></div>
-                            <span class="ba-label ba-before">Before</span>
-                            <span class="ba-label ba-after-label">After</span>
-                        </div>
-
-                        <div class="drag-hint">← Drag to compare →</div>
-                        <div class="omg-result-footer">Result after 5 clinical sessions</div>
-                    </div>
-
-                    <!-- 2. HAIR GFC THERAPY -->
-                    <div class="omg-result-card">
-                        <div class="omg-result-title">Hair GFC Therapy</div>
-                        <div class="omg-result-sub">
-                            Reduced hair fall, thicker density, visible regrowth.
-                        </div>
-
-                        <div class="ba-container">
-                            <img src="assets/img/results/rt-1.png">
-                            <img src="assets/img/results/rt-2.png" class="ba-after">
-                            <div class="ba-handle"></div>
-                            <span class="ba-label ba-before">Before</span>
-                            <span class="ba-label ba-after-label">After</span>
-                        </div>
-
-                        <div class="drag-hint">← Drag to compare →</div>
-                        <div class="omg-result-footer">Result after 6 growth cycles</div>
-                    </div>
-
-                    <!-- 3. PRP HAIR TREATMENT -->
-                    <div class="omg-result-card">
-                        <div class="omg-result-title">PRP Hair Treatment</div>
-                        <div class="omg-result-sub">
-                            Stronger roots, healthier scalp, long-term improvement.
-                        </div>
-
-                        <div class="ba-container">
-                            <img src="assets/img/results/prp-1.png">
-                            <img src="assets/img/results/prp-2.png" class="ba-after">
-                            <div class="ba-handle"></div>
-                            <span class="ba-label ba-before">Before</span>
-                            <span class="ba-label ba-after-label">After</span>
-                        </div>
-
-                        <div class="drag-hint">← Drag to compare →</div>
-                        <div class="omg-result-footer">Result after 9 PRP sessions</div>
-                    </div>
-
-                    <!-- 4. BODY SLIMMING -->
-                    <div class="omg-result-card">
-                        <div class="omg-result-title">Body Slimming Program</div>
-                        <div class="omg-result-sub">
-                            Inch loss, improved contouring, visible reshaping.
-                        </div>
-
-                        <div class="ba-container">
-                            <img src="assets/img/results/bl-1.png">
-                            <img src="assets/img/results/bl-2.png" class="ba-after">
-                            <div class="ba-handle"></div>
-                            <span class="ba-label ba-before">Before</span>
-                            <span class="ba-label ba-after-label">After</span>
-                        </div>
-
-                        <div class="drag-hint">← Drag to compare →</div>
-                        <div class="omg-result-footer">Result after 7 transformation sessions</div>
-                    </div>
-
-                    <!-- 5. ACNE & ACNE SCAR -->
-                    <div class="omg-result-card">
-                        <div class="omg-result-title">Acne & Acne Scar Treatment</div>
-                        <div class="omg-result-sub">
-                            Clearer skin, reduced scars, smoother texture.
-                        </div>
-
-                        <div class="ba-container">
-                            <img src="assets/img/results/acne-1.png">
-                            <img src="assets/img/results/acne-2.png" class="ba-after">
-                            <div class="ba-handle"></div>
-                            <span class="ba-label ba-before">Before</span>
-                            <span class="ba-label ba-after-label">After</span>
-                        </div>
-
-                        <div class="drag-hint">← Drag to compare →</div>
-                        <div class="omg-result-footer">Result after medical acne protocol</div>
-                    </div>
-
-
-
-
-                </div>
-
-
-                <!-- Mobile Dots -->
-                <div class="omg-carousel-dots" id="resultsDots"></div>
+                <a href="javascript:void(0);" onclick="openClinicPopup()">
+                    <img src="assets/img/results/glutathone-treatment.jpg" alt="Result Image 2">
+                </a>
             </div>
+
         </div>
     </section>
     <br><br>
@@ -938,67 +836,131 @@ RESULTS THAT SPEAK – SECTION
         <div class="divider-icon"><img src="assets/img/icons/divider-1-1.svg" alt="icon"></div>
     </div> -->
 
-    <section class="omg-team-section">
+    <section class="omg-team-section" id="team">
         <div class="container">
 
+            <!-- Heading -->
             <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-9 col-lg-7">
                     <div class="title-area">
                         <span class="sec-subtitle5">
-                            Medical Leadership at <span class="inner-text">Oh My Glow Clinic</span>
+                            Our Experts at <span class="inner-text">Oh My Glow Clinic</span>
                         </span>
 
                         <h2 class="sec-title4">
-                            Our Lead <span style="color: #831e6f;">Medical Expert</span>
+                            Meet Our <span style="color:#831e6f;">Team</span>
                         </h2>
 
                         <p class="sec-text">
-                            Clinical excellence guided by an experienced medical professional, ensuring every treatment
-                            is delivered with precision, safety, and adherence to established medical standards.
+                            Experienced doctors, aestheticians, and professionals dedicated to safe,
+                            personalised aesthetic care.
                         </p>
                     </div>
                 </div>
             </div>
 
+            <!-- TEAM GRID -->
+            <div class="omg-team-grid">
 
-            <!-- Single Doctor Card -->
-            <div class="omg-doctor-card single">
+                <!-- Doctor -->
+                <div class="omg-team-card">
+                    <div class="omg-team-img">
+                        <img src="assets/img/team/dr-harji-kaur.jpg" alt="Dr Harji Kaur">
+                    </div>
+                    <div class="omg-team-info">
+                        <h3>Dr. Harji Kaur</h3>
+                        <span class="omg-role">Dermatologist • Cosmetologist</span>
+                        <p class="omg-team-text" data-full="
+Dr. Harji Kaur is a senior dermatologist with over 21 years of experience in clinical dermatology, cosmetology, and venereology.
+
+She practices at Safdarjung Enclave, Delhi and has completed her MBBS from Jawahar Lal Nehru Medical College (AMU), followed by DNB in Dermatology & Venereology from the National Board of Examinations, Government of India.
+
+Her expertise includes skin rejuvenation, anti-ageing treatments, pigmentation correction, chemical peels, microdermabrasion and complete skin care for all skin types. All treatments are ethical, personalised, and result-driven.
+">
+                            Dr. Harji Kaur is a senior dermatologist with over 21 years
+                        </p>
+
+                        <button class="omg-show-more" type="button">
+                            View Full Profile →
+                        </button>
 
 
-                <!-- Image -->
-                <div class="omg-doctor-img">
-                    <img src="assets/img/team/dr-harji-kaur.jpg" alt="Dr Harji Kaur">
+                    </div>
                 </div>
 
-                <!-- Content -->
-                <div class="omg-doctor-info">
-                    <h3>Dr. Harji Kaur</h3>
-                    <span class="omg-role">
-                        Dermatologist • Cosmetologist • Venereologist
-                    </span>
+                <!-- Kavita -->
+                <div class="omg-team-card">
+                    <div class="omg-team-img">
+                        <img src="assets/img/team/kavita.jpg.jpeg" alt="Kavita">
+                    </div>
+                    <div class="omg-team-info">
+                        <h3>Kavita</h3>
+                        <span class="omg-role">Aesthetician</span>
+                        <p>32-year aesthetician with 4 years skin & hair expertise.</p>
 
-                    <!-- Meta -->
-                    <ul class="omg-meta">
-                        <li><strong>Experience:</strong> 21+ Years</li>
-                        <li><strong>Qualification:</strong> MBBS, DNB (Dermatology)</li>
-                        <li><strong>International Training:</strong> Dip GUM (UK)</li>
-                    </ul>
 
-                    <!-- SHORT BIO (6–7 WORDS ONLY) -->
-                    <p class="omg-short-bio">
-                        Trusted dermatologist with 21+ years experience.
-                    </p>
+                    </div>
+                </div>
 
-                    <!-- CTA -->
-                    <a href="team.html#dr-harji-kaur" class="omg-view-more">
-                        View Full Profile →
-                    </a>
+                <!-- Pooja -->
+                <div class="omg-team-card">
+                    <div class="omg-team-img">
+                        <img src="assets/img/team/pooja.jpg.jpeg" alt="Pooja">
+                    </div>
+                    <div class="omg-team-info">
+                        <h3>Pooja</h3>
+                        <span class="omg-role">Clinic Manager</span>
+                        <p>22-year clinic manager trained in VLCC cosmetology with two years experience.</p>
+
+
+                    </div>
+                </div>
+
+                <!-- Aarti -->
+                <div class="omg-team-card">
+                    <div class="omg-team-img">
+                        <img src="assets/img/team/arti.jpg.jpeg" alt="Aarti">
+                    </div>
+                    <div class="omg-team-info">
+                        <h3>Aarti</h3>
+                        <span class="omg-role">Aesthetician</span>
+                        <p>25-year aesthetician with 3.5 years advanced cosmetology experience.</p>
+
+
+                    </div>
+                </div>
+
+                <!-- Harpreet -->
+                <div class="omg-team-card">
+                    <div class="omg-team-img">
+                        <img src="assets/img/team/harpreet.jpg.jpeg" alt="Harpreet">
+                    </div>
+                    <div class="omg-team-info">
+                        <h3>Harpreet</h3>
+                        <span class="omg-role">Aesthetician</span>
+                        <p>23-year aesthetician with 5 years experience in aesthetics.</p>
+
+                    </div>
                 </div>
 
             </div>
+            <!-- TEAM PROFILE MODAL -->
+            <div class="omg-profile-modal" id="omgProfileModal">
+                <div class="omg-profile-backdrop"></div>
+
+                <div class="omg-profile-box">
+                    <button class="omg-profile-close">&times;</button>
+                    <h3 id="omgProfileName"></h3>
+                    <span id="omgProfileRole"></span>
+                    <p id="omgProfileText"></p>
+                </div>
+            </div>
+
+
         </div>
-        <br><br> <br><br>
     </section>
+    <br><br>
+
 
 
 
@@ -1629,6 +1591,39 @@ RESULTS THAT SPEAK – SECTION
             c.addEventListener('touchend', () => active = false);
         });
     </script>
+    <script>
+        document.querySelectorAll('.omg-team-card').forEach(card => {
+            const text = card.querySelector('.omg-team-text');
+            const btn = card.querySelector('.omg-show-more');
+
+            if (!text || !btn || !text.dataset.full) {
+                if (btn) btn.style.display = 'none';
+                return;
+            }
+
+            btn.addEventListener('click', () => {
+                document.getElementById('omgProfileName').innerText =
+                    card.querySelector('h3').innerText;
+
+                document.getElementById('omgProfileRole').innerText =
+                    card.querySelector('.omg-role').innerText;
+
+                document.getElementById('omgProfileText').innerText =
+                    text.dataset.full;
+
+                document.getElementById('omgProfileModal')
+                    .classList.add('active');
+            });
+        });
+
+        /* CLOSE HANDLERS */
+        document.querySelector('.omg-profile-backdrop').onclick =
+            document.querySelector('.omg-profile-close').onclick = () => {
+                document.getElementById('omgProfileModal')
+                    .classList.remove('active');
+            };
+    </script>
+
 
 
 </body>

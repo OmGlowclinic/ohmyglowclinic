@@ -88,27 +88,25 @@
                 <ul>
                     <li>
                         <a href="index.html">Home</a>
+                    <li>
+                        <a href="#about">About Us</a>
                     </li>
                     <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a href="service.html">Service</a>
+                        <a href="#services">Service</a>
                         <!-- <ul class="sub-menu">
-                            <li><a href="service.html">Services</a></li>
-                            <li><a href="service-details.html">Service Details</a></li>
-                        </ul> -->
+                                            <li><a href="service-details.html">Services</a></li>
+                                        </ul> -->
                     </li>
                     <li>
-                        <a href="team.html">Team</a>
+                        <a href="#results">Results</a>
+                    </li>
+
+                    <li>
+                        <a href="#team">Team</a>
                     </li>
                     <li>
                         <a href="/womens/">Women</a>
                     </li>
-
-                    <!-- <li>
-                        <a href="contact.html">Contact Us</a>
-                    </li> -->
                 </ul>
 
             </div>
@@ -213,16 +211,20 @@
                                     <li>
                                         <a href="index.html">Home</a>
                                     <li>
-                                        <a href="about.html">About Us</a>
+                                        <a href="#about">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="service.html">Service</a>
+                                        <a href="#services">Service</a>
                                         <!-- <ul class="sub-menu">
                                             <li><a href="service-details.html">Services</a></li>
                                         </ul> -->
                                     </li>
                                     <li>
-                                        <a href="team.html">Team</a>
+                                        <a href="#results">Results</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#team">Team</a>
                                     </li>
                                     <li>
                                         <a href="/womens/">Women</a>
@@ -468,6 +470,18 @@
 
     <script src="dynamic.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        document.querySelectorAll('.vs-mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const toggleBtn = document.querySelector('.vs-menu-toggle');
+                if (toggleBtn) {
+                    toggleBtn.click(); // closes the menu properly
+                }
+            });
+        });
+    </script>
+
 
 </body>
 
