@@ -3,15 +3,16 @@
     /* =========================
        CONFIG
     ========================= */
-    const SHEET_URL = "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec";
+    const SHEET_URL =
+        "https://script.google.com/macros/s/AKfycbx1f17Rfn9rqHD8wXqVNi3OQQMp3ihztTt7QyRPi6UcaurXHkWT4gj3Ad0h_IyrLeP0/exec";
 
     /* =========================
        ELEMENTS
     ========================= */
     const overlay = document.getElementById("omgcpOverlay");
-    const closeBtn = overlay?.querySelector(".omgcp-close");
     const form = document.getElementById("omgcpForm");
-    const serviceSelect = document.querySelector('#omgcpForm select[name="service"]');
+    const closeBtn = overlay?.querySelector(".omgcp-close");
+    const serviceSelect = form?.querySelector('select[name="service"]');
     const genderInputs = form?.querySelectorAll('input[name="gender"]');
 
     if (!overlay || !form || !serviceSelect || !genderInputs) return;
@@ -45,7 +46,7 @@
         unlockScroll();
     }
 
-    // Manual trigger
+    // Expose manual trigger
     window.openClinicPopup = openPopup;
 
     /* =========================
@@ -64,27 +65,23 @@
         serviceSelect.value = "";
 
         serviceOptions.forEach(option => {
-            const value = option.value;
 
-            if (!value) {
-                option.hidden = false; // "Select Service"
+            if (!option.value) {
+                option.hidden = false; // "Select Service *"
                 return;
             }
 
-            if (value === "General Contact / Inquiry") {
-                option.hidden = false; // Always visible
-                return;
-            }
+            const allowedGender = option.dataset.gender;
 
-            if (gender === "Men") {
-                option.hidden = !value.startsWith("Men");
-            } else if (gender === "Women") {
-                option.hidden = !value.startsWith("Women");
+            if (allowedGender === "both") {
+                option.hidden = false;
+            } else {
+                option.hidden = allowedGender !== gender.toLowerCase();
             }
         });
     }
 
-    // Default = Men
+    // Default state → Men
     filterServicesByGender("Men");
 
     genderInputs.forEach(input => {
@@ -94,31 +91,39 @@
     });
 
     /* =========================
-       SERVICE BUTTON → POPUP
+       SERVICE CARD → POPUP
     ========================= */
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".omg-ms-btn");
         if (!btn) return;
 
-        const selectedService = btn.getAttribute("data-service");
-        if (!selectedService) return;
+        const serviceId = btn.getAttribute("data-service");
+        if (!serviceId) return;
 
         openPopup();
 
-        // Auto-select service (and ensure correct gender list is visible)
         setTimeout(() => {
-            serviceSelect.value = selectedService;
 
-            if (selectedService.startsWith("Women")) {
-                document.getElementById("gender-women")?.click();
-            } else {
-                document.getElementById("gender-men")?.click();
-            }
-        }, 50);
+            // 1️⃣ Detect gender from service ID
+            const isWomen = serviceId.startsWith("women");
+            const genderValue = isWomen ? "Women" : "Men";
+
+            // 2️⃣ Switch gender first (important)
+            const genderRadio = document.querySelector(
+                `input[name="gender"][value="${genderValue}"]`
+            );
+            genderRadio?.click();
+
+            // 3️⃣ Select correct service using data-service
+            serviceOptions.forEach(option => {
+                option.selected = option.dataset.service === serviceId;
+            });
+
+        }, 80);
     });
 
     /* =========================
-       FORM SUBMIT (GOOGLE SHEET)
+       FORM SUBMIT → GOOGLE SHEET
     ========================= */
     form.addEventListener("submit", function (e) {
         e.preventDefault();

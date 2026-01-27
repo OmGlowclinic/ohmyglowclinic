@@ -1,184 +1,249 @@
-/* ================= MEN SERVICES DATA ================= */
+/* ================= WOMEN SERVICES DATA ================= */
 
-const services = [
+const womenServices = [
 
     /* ================= SKIN ================= */
     {
-        id: "men-omg-7-medifacials",
-        title: "Men – OMG 7 Signature MediFacials",
+        id: "women-omg-7-medifacials",
+        title: "Women – OMG 7 Signature MediFacials",
         cat: "skin",
-        img: "/mens/assets/img/service/sr-4-1.jpg",
-        desc: "Advanced doctor-designed medi-facials for instant glow and skin health."
+        img: "/womens/assets/img/service/sr-4-2.jpg",
+        desc: "Doctor-designed medi-facials for glow, hydration, and long-term skin health."
     },
     {
-        id: "men-acne-scar-treatment",
-        title: "Men – Acne & Acne Scar Treatment",
+        id: "women-acne-scar",
+        title: "Women – Acne & Acne Scar Treatment",
         cat: "skin",
-        img: "/mens/assets/img/service/sr-4-2.jpg",
-        desc: "Medical treatments to control acne and visibly reduce acne scars."
+        img: "/womens/assets/img/service/sr-4-3.jpg",
+        desc: "Advanced clinical solutions to control acne and reduce acne scars."
     },
     {
-        id: "men-pigmentation-treatment",
-        title: "Men – Pigmentation Treatment",
+        id: "women-pigmentation-melasma",
+        title: "Women – Pigmentation & Melasma Treatment",
         cat: "skin",
-        img: "/mens/assets/img/service/sr-4-3.jpg",
-        desc: "Targeted solutions for pigmentation, tanning, and uneven skin tone."
+        img: "/womens/assets/img/service/sr-4-4.jpg",
+        desc: "Targeted treatments to correct pigmentation and melasma safely."
     },
     {
-        id: "men-anti-ageing-treatment",
-        title: "Men – Anti-Ageing Treatment",
+        id: "women-skin-brightening",
+        title: "Women – Skin Brightening Treatment",
         cat: "skin",
-        img: "/mens/assets/img/service/sr-4-4.jpg",
-        desc: "Clinically proven anti-ageing treatments to restore youthful skin."
+        img: "/womens/assets/img/service/sr-4-5.jpg",
+        desc: "Medical skin brightening for even tone and natural radiance."
     },
     {
-        id: "men-injectables",
-        title: "Men – Injectables (Botox, Fillers, Threads)",
+        id: "women-anti-ageing",
+        title: "Women – Anti-Ageing Treatment",
         cat: "skin",
-        img: "/mens/assets/img/service/sr-4-5.jpg",
-        desc: "Doctor-led injectable treatments for wrinkles, volume loss and lifting."
+        img: "/womens/assets/img/service/sr-4-6.jpg",
+        desc: "Non-surgical anti-ageing solutions for firm, youthful skin."
     },
+
     {
-        id: "men-chemical-peels",
-        title: "Men – Chemical Peels",
+        id: "women-chemical-peels",
+        title: "Women – Injectables & Chemical Peels",
         cat: "skin",
-        img: "/mens/assets/img/service/sr-4-6.jpg",
+        img: "/womens/assets/img/service/sr-4-1.jpg",
         desc: "Medical-grade peels for brighter, smoother, clearer skin."
     },
 
     /* ================= BODY ================= */
     {
-        id: "men-weight-loss",
-        title: "Men – Weight Loss Program",
+        id: "women-weight-loss",
+        title: "Women – Weight Loss Program",
         cat: "body",
-        img: "/mens/assets/img/service/sr-4-7.jpg",
-        desc: "Doctor-supervised weight loss programs for safe, sustainable results."
+        img: "/womens/assets/img/service/sr-4-7.jpg",
+        desc: "Clinically guided weight loss programs for safe, visible results."
     },
     {
-        id: "men-inch-loss",
-        title: "Men – Inch Loss Program",
+        id: "women-inch-loss",
+        title: "Women – Inch Loss Program",
         cat: "body",
-        img: "/mens/assets/img/service/sr-4-8.jpg",
-        desc: "Targeted inch loss treatments for body shaping and contouring."
+        img: "/womens/assets/img/service/sr-4-8.jpg",
+        desc: "Targeted inch loss treatments for body reshaping."
     },
     {
-        id: "men-body-contouring",
-        title: "Men – Body Contouring",
+        id: "women-body-contouring",
+        title: "Women – Body Contouring",
         cat: "body",
-        img: "/mens/assets/img/service/sr-4-9.jpg",
-        desc: "Non-surgical body contouring to sculpt and define your physique."
+        img: "/womens/assets/img/service/sr-4-9.jpg",
+        desc: "Advanced body contouring for sculpted curves."
     },
     {
-        id: "men-spot-fat-reduction",
-        title: "Men – Spot Fat Reduction",
+        id: "women-spot-fat",
+        title: "Women – Spot Fat Reduction",
         cat: "body",
-        img: "/mens/assets/img/service/sr-4-10.jpg",
-        desc: "Advanced treatments to reduce stubborn fat from specific areas."
+        img: "/womens/assets/img/service/sr-4-10.jpg",
+        desc: "Non-invasive spot fat reduction treatments."
+    },
+    {
+        id: "women-tummy-tuck",
+        title: "Women – Non-Surgical Tummy Tuck",
+        cat: "body",
+        img: "/womens/assets/img/service/sr-4-11.jpg",
+        desc: "Tighten and firm abdomen without surgery."
+    },
+    {
+        id: "women-stretch-marks",
+        title: "Women – Stretch Marks & Scar Reduction",
+        cat: "body",
+        img: "/womens/assets/img/service/sr-4-12.jpg",
+        desc: "Visible improvement in stretch marks and scars."
+    },
+    {
+        id: "women-body-brightening",
+        title: "Women – Body Brightening Treatment",
+        cat: "body",
+        img: "/womens/assets/img/service/sr-4-13.jpg",
+        desc: "Full-body brightening for smooth, even-toned skin."
     },
 
-    /* ================= BODY ================= */
+    /* ================= HAIR ================= */
     {
-        id: "men-non-surgical-tummy-tuck",
-        title: "Men – Non-Surgical Tummy Tuck",
-        cat: "body",
-        img: "/mens/assets/img/service/sr-4-15.jpg",
-        desc: "Advanced non-surgical procedures to tighten abdominal skin and reduce stubborn fat."
+        id: "women-hair-fall",
+        title: "Women – Hair Fall Treatment",
+        cat: "hair",
+        img: "/womens/assets/img/service/sr-4-14.jpg",
+        desc: "Root-level treatments to control hair fall."
     },
     {
-        id: "men-stretch-marks-scar-reduction",
-        title: "Men – Stretch Marks & Scar Reduction",
-        cat: "body",
-        img: "/mens/assets/img/service/sr-4-16.jpg",
-        desc: "Medical treatments to visibly reduce stretch marks and scars, improving skin texture."
+        id: "women-hair-thinning",
+        title: "Women – Hair Thinning Treatment",
+        cat: "hair",
+        img: "/womens/assets/img/service/sr-4-15.jpg",
+        desc: "Solutions to improve hair density and strength."
     },
     {
-        id: "men-body-brightening-treatment",
-        title: "Men – Body Brightening Treatment",
-        cat: "body",
-        img: "/mens/assets/img/service/sr-4-17.jpg",
-        desc: "Targeted therapies to improve overall skin tone, clarity, and body skin radiance."
+        id: "women-hair-revital",
+        title: "Women – Hair Revital Boost",
+        cat: "hair",
+        img: "/womens/assets/img/service/sr-4-16.jpg",
+        desc: "Nutrient-rich therapy to revive weak hair."
     },
-    
-
+    {
+        id: "women-gfc-prp",
+        title: "Women – GFC / PRP Treatment",
+        cat: "hair",
+        img: "/womens/assets/img/service/sr-4-17.jpg",
+        desc: "Growth factor therapies for natural hair regrowth."
+    },
 
     /* ================= PMU ================= */
     {
-        id: "men-pmu-beard-shaping",
-        title: "Men – PMU Beard Shaping",
+        id: "women-lip-blush",
+        title: "Women – Lip Blush",
         cat: "pmu",
-        img: "/mens/assets/img/service/sr-4-19.jpg",
-        desc: "Permanent beard shaping for fuller, well-defined beard lines."
+        img: "/womens/assets/img/service/sr-4-18.jpg",
+        desc: "Natural-looking lip tint for enhanced lips."
     },
     {
-        id: "men-pmu-lip-tint",
-        title: "Men – PMU Lip Tint",
+        id: "women-microblading",
+        title: "Women – Microblading",
         cat: "pmu",
-        img: "/mens/assets/img/service/sr-4-21.jpeg",
-        desc: "Natural-looking lip pigmentation for improved tone and colour."
+        img: "/womens/assets/img/service/sr-4-19.jpg",
+        desc: "Perfectly shaped brows with microblading."
     },
     {
-        id: "men-scalp-micropigmentation",
-        title: "Men – Scalp Micropigmentation",
+        id: "women-ombre-brows",
+        title: "Women – Ombre Brows",
         cat: "pmu",
-        img: "/mens/assets/img/service/sr-4-20.jpg",
-        desc: "Creates the appearance of fuller hair using micro-pigmentation."
+        img: "/womens/assets/img/service/sr-4-20.jpg",
+        desc: "Soft shaded brows for a defined look."
+    },
+    {
+        id: "women-eyebrow-shaping",
+        title: "Women – Eyebrow Shaping",
+        cat: "pmu",
+        img: "/womens/assets/img/service/sr-4-21.jpg",
+        desc: "Expert eyebrow shaping for balanced facial features."
+    },
+    {
+        id: "women-bb-glow",
+        title: "Women – BB Glow",
+        cat: "pmu",
+        img: "/womens/assets/img/service/sr-4-22.jpg",
+        desc: "Semi-permanent glow treatment for flawless skin."
     },
 
     /* ================= LASER ================= */
     {
-        id: "men-beard-laser",
-        title: "Men – Beard Shaping Laser",
+        id: "women-laser-face",
+        title: "Women – Full Face Laser Hair Reduction",
         cat: "laser",
-        img: "/mens/assets/img/service/sr-4-15.jpg",
-        desc: "Precision laser treatment for sharp and defined beard lines."
+        img: "/womens/assets/img/service/sr-4-23.jpg",
+        desc: "Safe laser hair reduction for the full face."
     },
     {
-        id: "men-chest-laser",
-        title: "Men – Chest Laser Hair Reduction",
+        id: "women-laser-underarms",
+        title: "Women – Underarms Laser Hair Reduction",
         cat: "laser",
-        img: "/mens/assets/img/service/sr-4-16.jpg",
-        desc: "Safe and effective laser hair reduction for chest area."
+        img: "/womens/assets/img/service/sr-4-24.jpg",
+        desc: "Smooth, hair-free underarms with laser technology."
     },
     {
-        id: "men-back-shoulder-laser",
-        title: "Men – Back & Shoulder Laser Hair Reduction",
+        id: "women-laser-arms",
+        title: "Women – Full Arms Laser Hair Reduction",
         cat: "laser",
-        img: "/mens/assets/img/service/sr-4-17.jpg",
-        desc: "Long-term laser hair reduction for back and shoulders."
+        img: "/womens/assets/img/service/sr-4-25.jpg",
+        desc: "Long-lasting hair reduction for arms."
     },
     {
-        id: "men-full-body-laser",
-        title: "Men – Full Body Laser Hair Reduction",
+        id: "women-laser-legs",
+        title: "Women – Full Legs Laser Hair Reduction",
         cat: "laser",
-        img: "/mens/assets/img/service/sr-4-18.jpg",
-        desc: "Advanced FDA-approved laser systems for full body hair reduction."
+        img: "/womens/assets/img/service/sr-4-26.jpg",
+        desc: "Smooth legs with advanced laser systems."
+    },
+    {
+        id: "women-laser-bikini",
+        title: "Women – Bikini Laser Hair Reduction",
+        cat: "laser",
+        img: "/womens/assets/img/service/sr-4-27.jpg",
+        desc: "Precision laser treatment for bikini area."
+    },
+    {
+        id: "women-laser-full-body",
+        title: "Women – Full Body Laser Hair Reduction",
+        cat: "laser",
+        img: "/womens/assets/img/service/sr-4-28.jpg",
+        desc: "Complete body laser hair reduction packages."
     },
 
     /* ================= OTHERS ================= */
     {
-        id: "men-iv-drips",
-        title: "Men – IV Drips Therapy",
+        id: "women-iv-drip",
+        title: "Women – IV Drip Therapy",
         cat: "other",
-        img: "/mens/assets/img/service/sr-4-1.jpg",
-        desc: "IV therapies for energy, immunity, skin and overall wellness."
+        img: "/womens/assets/img/service/sr-4-2.jpg",
+        desc: "Japanese IV drip therapy for wellness and rejuvenation."
     },
     {
-        id: "men-body-brightening",
-        title: "Men – Body Brightening",
+        id: "women-valentine",
+        title: "Women – Valentine’s Packages",
         cat: "other",
-        img: "/mens/assets/img/service/sr-4-1.jpg",
-        desc: "Medical body brightening treatments for even skin tone."
+        img: "/womens/assets/img/service/sr-4-2.jpg",
+        desc: "Special glow packages curated for Valentine’s."
     },
     {
-        id: "men-prewedding-groom",
-        title: "Men – Pre-Wedding Packages for Grooms",
+        id: "women-student",
+        title: "Women – Student Packages",
         cat: "other",
-        img: "/mens/assets/img/service/sr-4-1.jpg",
-        desc: "Customized pre-wedding grooming packages for grooms."
+        img: "/womens/assets/img/service/sr-4-2.jpg",
+        desc: "Affordable clinic packages specially for students."
+    },
+    {
+        id: "women-wedding",
+        title: "Women – Wedding Glow Packages",
+        cat: "other",
+        img: "/womens/assets/img/service/sr-4-2.jpg",
+        desc: "Complete bridal glow programs for your big day."
     }
-
 ];
 
+/* ================= ACTIVE SERVICES (CRITICAL FIX) ================= */
+const services = womenServices;
+
+/* ================= EXISTING LOGIC (UNCHANGED) ================= */
 
 const grid = document.getElementById("serviceGrid");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
@@ -187,8 +252,6 @@ let activeTab = "all";
 const MIN_COUNT = 4;
 const MAX_COUNT = 8;
 let visibleCount = MIN_COUNT;
-
-/* ================= RENDER ================= */
 
 function renderServices() {
     grid.innerHTML = "";
@@ -201,99 +264,42 @@ function renderServices() {
 
     display.forEach(s => {
         grid.innerHTML += `
-          <div class="omg-ms-card ${s.featured ? "featured" : ""}">
+          <div class="omg-ms-card">
             <img src="${s.img}">
             <div class="omg-ms-card-body">
               <div>
-                <h4>${s.title.replace("Men – ", "")}</h4>
+                <h4>${s.title.replace("Women – ", "")}</h4>
                 <strong>Doctor-recommended treatment</strong>
                 <p>${s.desc}</p>
               </div>
-              <button 
-                class="omg-ms-btn" 
-                data-service="${s.id}">
+              <button class="omg-ms-btn" data-service="${s.id}">
                 Consult Doctor
               </button>
             </div>
           </div>`;
     });
 
-    if (filtered.length <= MIN_COUNT) {
-        loadMoreBtn.style.display = "none";
-    } else {
-        loadMoreBtn.style.display = "inline-flex";
-        loadMoreBtn.innerText =
-            visibleCount === MAX_COUNT ? "Show Less" : "Show More";
-    }
+    loadMoreBtn.style.display =
+        filtered.length <= MIN_COUNT ? "none" : "inline-flex";
+    loadMoreBtn.innerText =
+        visibleCount === MAX_COUNT ? "Show Less" : "Show More";
 }
 
-/* ================= TABS ================= */
+loadMoreBtn.onclick = () => {
+    visibleCount = visibleCount === MAX_COUNT ? MIN_COUNT : MAX_COUNT;
+    renderServices();
+};
 
 document.querySelectorAll(".omg-ms-tab").forEach(tab => {
     tab.onclick = () => {
         document.querySelectorAll(".omg-ms-tab")
             .forEach(t => t.classList.remove("active"));
-
         tab.classList.add("active");
         activeTab = tab.dataset.tab;
-
         visibleCount = MIN_COUNT;
         renderServices();
     };
 });
 
-/* ================= SHOW MORE / LESS ================= */
-
-loadMoreBtn.onclick = () => {
-    visibleCount =
-        visibleCount === MAX_COUNT ? MIN_COUNT : MAX_COUNT;
-    renderServices();
-};
-
-/* ================= SERVICE → POPUP (FIXED) ================= */
-
-document.addEventListener("click", e => {
-    const btn = e.target.closest(".omg-ms-btn");
-    if (!btn) return;
-
-    const serviceId = btn.dataset.service;
-    window.openClinicPopup?.();
-
-    setTimeout(() => {
-        const serviceSelect = document.getElementById("omgcpService");
-        if (!serviceSelect) return;
-
-        [...serviceSelect.options].forEach(opt => {
-            opt.selected = opt.dataset.service === serviceId;
-        });
-    }, 80);
-});
-
 /* INIT */
 renderServices();
-
-/* ================= TAB SWITCHING ================= */
-
-const tabs = document.querySelectorAll(".omg-ms-tab");
-const mobileSelect = document.getElementById("mobileTabSelect");
-
-function setActiveTab(tab) {
-    tabs.forEach(t => t.classList.remove("active"));
-    document.querySelector(`.omg-ms-tab[data-tab="${tab}"]`)
-        ?.classList.add("active");
-
-    mobileSelect.value = tab;
-    activeTab = tab;
-    visibleCount = MIN_COUNT;
-    renderServices();
-}
-
-/* Desktop */
-tabs.forEach(tab => {
-    tab.onclick = () => setActiveTab(tab.dataset.tab);
-});
-
-/* Mobile */
-mobileSelect.onchange = () => {
-    setActiveTab(mobileSelect.value);
-};
